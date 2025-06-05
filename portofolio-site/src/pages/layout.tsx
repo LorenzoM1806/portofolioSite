@@ -8,7 +8,9 @@ import {
   ActionIcon,
   Group,
   Avatar,
-  Stack
+  Stack,
+  Center,
+  Anchor
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useLocation, Link } from 'react-router-dom';
@@ -102,20 +104,32 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             />
           ))}
         </AppShell.Section>
-
+        <Center>
         <div>
-          <Group gap="xs">
-            <ActionIcon variant="filled" color="#e14631">
-              <IconBrandGithub />
-            </ActionIcon>
-            <ActionIcon variant="filled" color="#e14631">
-              <IconBrandLinkedin />
-            </ActionIcon>
-            <ActionIcon variant="filled" color="#e14631">
-              <IconMail/>
-            </ActionIcon>
-          </Group>
+          <Group gap="xl" align="center">
+      {/* GitHub-link */}
+      <Anchor href="https://github.com/LorenzoM1806" target="_blank" rel="noopener noreferrer">
+        <ActionIcon variant="subtle" color="#e14631" size="xl">
+          <IconBrandGithub size="xl" />
+        </ActionIcon>
+      </Anchor>
+
+      {/* LinkedIn-link */}
+      <Anchor href="https://www.linkedin.com/in/lorenzo-miechielsen-82602b27a/" target="_blank" rel="noopener noreferrer">
+        <ActionIcon variant="subtle" color="#e14631" size="xl">
+          <IconBrandLinkedin size="xl" />
+        </ActionIcon>
+      </Anchor>
+
+      {/* E-mail-link */}
+      <Anchor href="mailto:lorenzomiechielsen@hotmail.com">
+        <ActionIcon variant="subtle" color="#e14631" size="xl">
+          <IconMail size="xl" />
+        </ActionIcon>
+      </Anchor>
+    </Group>
         </div>
+        </Center>
       </AppShell.Navbar>
 
       <AppShell.Main w={"100%"}>{children}</AppShell.Main>

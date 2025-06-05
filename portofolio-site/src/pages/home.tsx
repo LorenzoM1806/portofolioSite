@@ -4,6 +4,7 @@ import {
   Stack,
   Text,
   Title,
+  Group,
 } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 
@@ -11,35 +12,42 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <>
-      <Container
-        size={"xl"}
-        mih={"100vh"}
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Stack align="center" justify="center">
-          <Title order={1} mb={"sm"}>
-            {" "}
-            Welkom op mijn portofolio
-          </Title>
+    <Container
+      size="xl"
+      mih="100vh"
+      style={{
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Stack align="center" justify="center" gap="lg" ta="center">
+        <Title order={1}>Portfolio – Lorenzo Miechielsen</Title>
 
-          <Text size={"lg"} mb={"lg"}>
-            Doorheen dit portofolio zal u mijn vaardigheden kunnen lezen die ik
-            tijdens mijn opleiding Toegepaste informatica - Application
-            Development heb geleerd. Ook zal u kunnen lezen over mijn meest
-            recente stage die ik heb mogen lopen, een aantal projecten die zijn
-            gerealizeerd en wat meer over mezelf.
-          </Text>
+        <Text size="lg">
+          Welkom op mijn professionele portfolio, het sluitstuk van mijn opleiding
+          Toegepaste Informatica – Application Development. Deze site geeft een overzicht
+          van de vaardigheden en kennis die ik heb verworven, geïllustreerd met projecten,
+          stages en praktische toepassingen. 
+        </Text>
 
-          <Button size="md" onClick={() => navigate("/over-mij")} bg={"#e14631"}>
+        <Text size="md">
+          Mijn doel is om u als IT-professional een helder beeld te geven van mijn capaciteiten,
+          groeitraject en ambities binnen de softwareontwikkeling.
+        </Text>
+
+        <Group mt="md">
+          <Button onClick={() => navigate("/over-mij")} variant="filled" color="#e14631">
             Over Mij
           </Button>
-        </Stack>
-      </Container>
-    </>
+          <Button variant="filled" color="#e14631" onClick={() => navigate("/realisaties")}>
+            Projecten
+          </Button>
+          <Button variant="filled" color="#e14631" onClick={() => navigate("/stage")}>
+            Stage
+          </Button>
+        </Group>
+      </Stack>
+    </Container>
   );
 }
 

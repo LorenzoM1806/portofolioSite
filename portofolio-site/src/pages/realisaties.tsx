@@ -6,7 +6,6 @@ import {
   Image,
   Grid,
   Card,
-  AspectRatio,
   Text,
   Stack,
   Center,

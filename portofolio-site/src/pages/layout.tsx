@@ -4,7 +4,6 @@ import {
   NavLink, 
   Text, 
   useMantineTheme, 
-  rem, 
   ActionIcon,
   Group,
   Avatar,

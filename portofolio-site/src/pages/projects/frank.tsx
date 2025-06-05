@@ -13,7 +13,7 @@ import {
   Group,
   ActionIcon,
 } from "@mantine/core";
-import { IconArrowBigLeft, IconArrowElbowLeft } from "@tabler/icons-react";
+import { IconArrowBigLeft } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
 
 function Frank() {

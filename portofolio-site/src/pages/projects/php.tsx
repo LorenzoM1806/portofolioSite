@@ -22,7 +22,7 @@ import { useNavigate } from "react-router-dom";
 function Php() {
   const navigate = useNavigate();
   return (
-    <Container mt="xl" w={"100vw"}>
+    <Container mt="xl" fluid>
       <Box mb="lg">
         <Group gap={"sm"}>
           <ActionIcon
@@ -47,62 +47,69 @@ function Php() {
       <Grid>
         <Grid.Col span={7}>
           <Text>
-            In het tweede semester van het academiejaar 2023-2024 hebben wij
-            voor het vak PHP een groepsproject uitgewerkt, voortbouwend op de
-            design-rapporten die in het eerste semester door andere teams waren
-            opgesteld. Onze opdrachtgever was Hans Bartholomeus.
+            In het tweede semester van het academiejaar{" "}
+            <strong>2023-2024</strong> hebben wij voor het vak{" "}
+            <strong>PHP</strong> een groepsproject uitgewerkt, voortbouwend op
+            de design-rapporten van het eerste semester. Onze opdrachtgever was 
+            <strong> Hans Bartholomeus</strong>.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Voor dit project ontwikkelden we een website ter ondersteuning van
-            een jaarlijkse wielerwedstrijd. De site diende de organisatie
-            verschillende functionaliteiten te bieden.
+            Voor dit project ontwikkelden we een <strong>website</strong> ter
+            ondersteuning van een jaarlijkse <strong>wielerwedstrijd</strong>.
+            De site moest verschillende
+            <strong> functionaliteiten</strong> bieden voor de organisatie.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Teams moesten zich via de website kunnen registreren. Na het
-            inschrijving ontvangen zij automatisch een bevestigingsmail met alle
-            benodigde gegevens, waaronder de betalingsinstructies. Indien een
-            team binnen de gestelde termijn geen betaling verrichtte, genereerde
-            het systeem een herinneringsmail met een betalingsverzoek.
+            Teams moesten zich via de website kunnen{" "}
+            <strong>registreren</strong>. Na inschrijving ontvingen zij
+            automatisch een <strong>bevestigingsmail</strong> met
+            <strong> betalingsinstructies</strong>. Bij uitblijvende betaling
+            volgde een
+            <strong>herinneringsmail</strong>.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Er is een login‐module opgezet waarmee enkel bevoegde organisatoren
-            toegang kregen tot hun toegewezen pagina’s. Op deze manier bleven
-            vertrouwelijke onderdelen, zoals deelnemerslijsten en
-            administratieve gegevens, afgeschermd voor publiek.
+            Er werd een <strong>login‐module</strong> opgezet zodat enkel
+            bevoegde
+            <strong> organisatoren</strong> toegang kregen tot hun pagina’s. Zo
+            bleven
+            <strong> vertrouwelijke gegevens</strong> zoals deelnemerslijsten
+            afgeschermd.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            De verantwoordelijke organisator kon via een drag-and-drop interface
-            de startvolgorde van de teams samenstellen. Zodra de volgorde
-            definitief was, werd een PDF-bestand gegenereerd en per e-mail naar
-            alle betrokken partijen verzonden.
+            De verantwoordelijke organisator kon via een{" "}
+            <strong>drag-and-drop interface </strong>
+             de <strong>startvolgorde</strong> bepalen. Bij bevestiging werd
+            automatisch een
+            <strong> PDF-bestand</strong> gegenereerd en verzonden.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Tijdens de wedstrijddag kon een gebruiker (bijvoorbeeld een
-            wedstrijdsecretaris) de deelnemende ploegen aanmelden en voor elk
-            team een rugnummer toewijzen. Dit vereenvoudigde de herkenning op de
-            baan en zorgde voor een gestructureerd verloop van de wedstrijd.
+            Tijdens de wedstrijddag kon een <strong>wedstrijdsecretaris</strong>{" "}
+            ploegen
+            <strong> aanmelden</strong> en elk team een{" "}
+            <strong>rugnummer</strong> toewijzen, voor een vlot
+            wedstrijdverloop.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Op een aparte pagina konden motors worden toegewezen aan de teams,
-            waarna de wedstrijdleiding de starttijden toekende. Daarnaast was er
-            een tijdspagina ingericht waarop per team de tijd gestart kon
-            worden. Elke keer dat een team een ronde afrondde, werd automatisch
-            een rondetijd opgeslagen.
+            Op een aparte pagina konden <strong>motors</strong> en{" "}
+            <strong>starttijden</strong> worden toegewezen. De{" "}
+            <strong>tijdspagina</strong> liet toe om per team rondetijden
+            <strong> automatisch op te slaan</strong>.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Tot slot werd er een live-klassementspagina ontwikkeld waarop de
-            actuele standen tijdens de wedstrijd zichtbaar waren. Na afloop kon
-            het definitieve klassement via e-mail als PDF-verslag worden
-            verstuurd of door de organisatie worden afgedrukt.
+            Tot slot werd een <strong>live-klassementspagina</strong>{" "}
+            ontwikkeld. Na afloop kon het
+            <strong> definitieve klassement</strong> als <strong>PDF</strong>{" "}
+            worden verzonden of afgedrukt.
           </Text>
         </Grid.Col>
+
         <Grid.Col span={5}>
           <Paper shadow="xl" w={"100%"}>
             <Container>

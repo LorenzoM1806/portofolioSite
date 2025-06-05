@@ -13,6 +13,7 @@ import {
   Button,
   Anchor,
   Card,
+  Center,
 } from "@mantine/core";
 import profielFoto from "../assets/profiel foto.jpg";
 
@@ -20,7 +21,7 @@ function OverMij() {
   return (
     <>
       {/* ====================== OVER MIJ ====================== */}
-      <Container mt="xl">
+      <Container mt="xl" fluid>
         {/* Header */}
         <Box mb="md">
           <Title order={2}>Over mij</Title>
@@ -29,12 +30,16 @@ function OverMij() {
 
         {/* Foto + Introductie */}
         <Group gap="xl">
-          <Image
-            radius="lg"
-            src={profielFoto}
-            alt="Profielfoto Lorenzo"
-            w={300}
-          />
+          <Box w={"40%"}>
+            <Center>
+              <Image
+                radius="lg"
+                src={profielFoto}
+                alt="Profielfoto Lorenzo"
+                w={300}
+              />
+            </Center>
+          </Box>
 
           <Stack gap="md" style={{ flex: 1 }}>
             <Text>
@@ -46,19 +51,20 @@ function OverMij() {
 
             <Text>
               Mijn eerste kennismaking met programmeren vond plaats tijdens mijn
-              middelbare school. Wat begon als een eenvoudige introductie groeide
-              snel uit tot een diepgaande interesse. Die fascinatie vormde de
-              aanleiding voor mijn keuze om het Graduaat Programmeren te volgen.
-              Op lange termijn is het mijn doel om een eigen onderneming op te
-              richten die via technologie bijdraagt aan een veiligere en
-              toekomstgerichte samenleving.
+              middelbare school. Wat begon als een eenvoudige introductie
+              groeide snel uit tot een diepgaande interesse. Die fascinatie
+              vormde de aanleiding voor mijn keuze om het Graduaat Programmeren
+              te volgen. Op lange termijn is het mijn doel om een eigen
+              onderneming op te richten die via technologie bijdraagt aan een
+              veiligere en toekomstgerichte samenleving.
             </Text>
 
             <Text>
               Ik ben een leergierige, analytisch denkende ontwikkelaar. Ik werk
-              graag in teamverband, maar neem ook zelfstandig verantwoordelijkheid
-              voor mijn werk. Wat mij het meeste aanspreekt, is het bouwen van
-              praktische toepassingen die echt gebruikt worden.
+              graag in teamverband, maar neem ook zelfstandig
+              verantwoordelijkheid voor mijn werk. Wat mij het meeste
+              aanspreekt, is het bouwen van praktische toepassingen die echt
+              gebruikt worden.
             </Text>
 
             <Text>
@@ -108,7 +114,7 @@ function OverMij() {
       </Container>
 
       {/* ====================== CV ====================== */}
-      <Container mt="xl">
+      <Container mt="xl" fluid>
         <Box mb="md">
           <Title order={3}>CV</Title>
           <Divider mt="xs" size="lg" color="#e14631" />

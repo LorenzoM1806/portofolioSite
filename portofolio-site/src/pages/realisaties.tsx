@@ -54,7 +54,7 @@ function Realisaties() {
   ];
 
   return (
-    <Container mt="xl">
+    <Container mt="xl" fluid>
       {/* Header */}
       <Box mb="lg">
         <Title order={2}>Projecten</Title>
@@ -65,7 +65,7 @@ function Realisaties() {
       <Grid gutter="md">
         {projecten.map((project) => (
           <Grid.Col key={project.titel} span={4}>
-            <Card shadow="sm" radius="md" withBorder w={300}>
+            <Card shadow="sm" radius="md" withBorder w={"90%"}>
                {/* Titel onder de afbeelding */}
               <Stack align="center" gap="xs" p="sm">
                 <Text fw={500} size="md">
@@ -79,7 +79,7 @@ function Realisaties() {
                     src={project.afbeelding}
                     alt={project.titel}
                     fit="cover"
-                    h={150}
+                    w={"100%"}
                   />
               </Link>
               </Center>

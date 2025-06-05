@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 function Roos() {
   const navigate = useNavigate();
   return (
-    <Container mt="xl" w={"100vw"}>
+    <Container mt="xl" fluid>
       <Box mb="lg">
         <Group gap={"sm"}>
           <ActionIcon
@@ -43,27 +43,45 @@ function Roos() {
       <Grid>
         <Grid.Col span={7}>
           <Text>
-            In het kader van mijn graduaatsopleiding Programmeren hebben wij in
-            teamverband een website ontwikkeld voor een echte klant: Club Roos
-            (Atelier Marjelle Roose). De site moest de volgende delen aanwezig
-            hebben:
+            In het kader van mijn{" "}
+            <strong>graduaatsopleiding Programmeren</strong> hebben wij in
+            <strong> teamverband</strong> een <strong>website ontwikkeld</strong>{" "}
+            voor een echte klant:
+            <strong> Club Roos</strong> (Atelier Marjelle Roose). De site moest
+            de volgende delen aanwezig hebben:
             <Space h={"xs"} />
             <List>
-              <List.Item>Interieur pagina</List.Item>
-              <List.Item>Over mij pagina</List.Item>
-              <List.Item>Instagram pagina</List.Item>
-              <List.Item>Contact pagina</List.Item>
-              <List.Item>Webshop pagina</List.Item>
-              <List.Item>Workshop pagina</List.Item>
-              <List.Item>Keramiek pagina</List.Item>
+              <List.Item>
+                <strong>Interieur pagina</strong>
+              </List.Item>
+              <List.Item>
+                <strong>Over mij pagina</strong>
+              </List.Item>
+              <List.Item>
+                <strong>Instagram pagina</strong>
+              </List.Item>
+              <List.Item>
+                <strong>Contact pagina</strong>
+              </List.Item>
+              <List.Item>
+                <strong>Webshop pagina</strong>
+              </List.Item>
+              <List.Item>
+                <strong>Workshop pagina</strong>
+              </List.Item>
+              <List.Item>
+                <strong>Keramiek pagina</strong>
+              </List.Item>
             </List>
             <Space h={"md"} />
             Aan het einde van het project koos de opdrachtgever onze inzending
-            als winnende website. Met enkele kleine aanpassingen wordt deze site
-            nog steeds gebruikt als de officiële online aanwezigheid van Club
-            Roos.
+            als
+            <strong> winnende website</strong>. Met enkele kleine aanpassingen
+            wordt deze site nog steeds gebruikt als de{" "}
+            <strong>officiële online aanwezigheid</strong> van Club Roos.
           </Text>
         </Grid.Col>
+
         <Grid.Col span={5}>
           <Paper shadow="xl" w={"100%"}>
             <Container>

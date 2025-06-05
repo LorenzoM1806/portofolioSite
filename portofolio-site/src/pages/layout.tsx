@@ -33,14 +33,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { label: 'Home', path: '/', icon: <IconHome/> },
     { label: 'Over Mij', path: '/over-mij', icon: <IconUser/> },
     { label: 'Stage', path: '/stage', icon: <IconBuilding/> },
-    { label: 'Realisaties', path: '/realisaties', icon: <IconPresentation/> },
+    { label: 'Projecten', path: '/realisaties', icon: <IconPresentation/> },
   ];
 
   return (
     <AppShell
       padding="lg"
       navbar={{
-        width: { sm: 150, lg: 250 },
+        width: { sm: 150, lg: 350 },
         breakpoint: 'sm',
         collapsed: { mobile: !opened },
       }}
@@ -49,6 +49,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         navbar: {
           backgroundColor: '#1c2123',
         },
+        main: {
+          width: '100%'
+        }
       }}
     >
       <AppShell.Navbar p="md">
@@ -131,7 +134,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </Center>
       </AppShell.Navbar>
 
-      <AppShell.Main w={"100%"}>{children}</AppShell.Main>
+      <AppShell.Main>{children}</AppShell.Main>
     </AppShell>
   );
 }

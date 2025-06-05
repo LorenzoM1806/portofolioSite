@@ -24,7 +24,7 @@ import { useNavigate } from "react-router-dom";
 function React() {
   const navigate = useNavigate();
   return (
-    <Container mt="xl" w={"100vw"}>
+    <Container mt="xl" fluid>
       <Box mb="lg">
         <Group gap={"sm"}>
           <ActionIcon
@@ -48,48 +48,58 @@ function React() {
       <Grid>
         <Grid.Col span={7}>
           <Text>
-            Dit is een van de projecten uit een eerdere opleiding, graduaat
-            programmeren. Hierbij hebben wij de opdracht gekregen om een
-            eenvoudige React-website met drie pagina’s te ontwikkelen, waarvan
-            er twee interactief moesten zijn. Voor deze opdracht heb ik een
-            Yu-Gi-Oh-card-site gerealiseerd met de volgende opzet:
+            Dit is een van de projecten uit een eerdere opleiding,{" "}
+            <strong>graduaat programmeren</strong>. Hierbij hebben wij de
+            opdracht gekregen om een eenvoudige <strong>React-website</strong>{" "}
+            met
+            <strong> drie pagina’s</strong> te ontwikkelen, waarvan er{" "}
+            <strong>twee interactief</strong> moesten zijn. Voor deze opdracht
+            heb ik een <strong>Yu-Gi-Oh-card-site</strong> gerealiseerd met de
+            volgende opzet:
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            De homepagina fungeert als navigatiemenu: gebruikers kunnen vanuit
-            hier doorklikken naar de andere pagina’s.
+            De <strong>homepagina</strong> fungeert als navigatiemenu:
+            gebruikers kunnen vanuit hier doorklikken naar de andere pagina’s.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
             Op deze pagina heeft de gebruiker de mogelijkheid om met één klik
-            een willekeurige kaart te genereren. Bij iedere gegenereerde kaart
-            wordt alle relevante informatie (naam, afbeelding, type,
-            aanval/defense, enz.) direct getoond. Dit is gerealiseerd door een
-            API-aanroep naar een publieke Yu-Gi-Oh-database, zodat de
-            kaartgegevens real-time worden opgehaald.
+            een <strong>willekeurige kaart te genereren</strong>. Bij iedere
+            gegenereerde kaart wordt alle relevante informatie (
+            <strong>naam, afbeelding, type, aanval/defense</strong>, enz.)
+            direct getoond. Dit is gerealiseerd door een{" "}
+            <strong>API-aanroep</strong> naar een publieke{" "}
+            <strong>Yu-Gi-Oh-database</strong>, zodat de kaartgegevens{" "}
+            <strong>real-time</strong> worden opgehaald.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Deze pagina biedt een zoekfunctie waarmee de gebruiker een archetype
-            kan invoeren (bijvoorbeeld “Blue-Eyes” of “Dark Magician”). Na het
-            uitvoeren van de zoekopdracht wordt een galerij getoond met alle
-            kaarten die aan het ingevoerde archetype voldoen, inclusief hun
-            afbeeldingen. De gebruiker kan op een individuele kaart klikken,
-            waarna deze in een nieuw tabblad wordt geopend met de volledige
-            kaartdetails. Ook deze data wordt live opgehaald via dezelfde
-            publieke API.
+            Deze pagina biedt een <strong>zoekfunctie</strong> waarmee de
+            gebruiker een <strong>archetype</strong> kan invoeren (bijvoorbeeld
+            “<strong>Blue-Eyes</strong>” of “<strong>Dark Magician</strong>”).
+            Na het uitvoeren van de zoekopdracht wordt een{" "}
+            <strong>galerij</strong> getoond met alle kaarten die aan het
+            ingevoerde archetype voldoen, inclusief hun{" "}
+            <strong>afbeeldingen</strong>. De gebruiker kan op een individuele
+            kaart klikken, waarna deze in een <strong>nieuw tabblad</strong>{" "}
+            wordt geopend met de volledige kaartdetails. Ook deze data wordt{" "}
+            <strong>live</strong> opgehaald via dezelfde publieke API.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            De website is volledig gebouwd met React en maakt gebruik van
-            functionele componenten en hooks om de state-beheer- en
-            API-communicatie te verzorgen. Door middel van fetch-calls worden
-            alle kaartgegevens uit de publieke API geladen wanneer een gebruiker
-            een actie uitvoert. Het resultaat is een gebruiksvriendelijke
-            interface die eenvoudig navigeert en vlot reageert op
-            gebruikersinput.
+            De website is volledig gebouwd met <strong>React</strong> en maakt
+            gebruik van <strong>functionele componenten</strong> en{" "}
+            <strong>hooks </strong>
+            om de <strong>state-beheer</strong> en{" "}
+            <strong>API-communicatie</strong> te verzorgen. Door middel van{" "}
+            <strong>fetch-calls</strong> worden alle kaartgegevens uit de
+            publieke API geladen wanneer een gebruiker een actie uitvoert. Het
+            resultaat is een <strong>gebruiksvriendelijke interface</strong> die
+            eenvoudig navigeert en vlot reageert op gebruikersinput.
           </Text>
         </Grid.Col>
+
         <Grid.Col span={5}>
           <Paper shadow="xl" w={"100%"}>
             <Container>

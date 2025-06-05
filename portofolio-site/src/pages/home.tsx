@@ -13,7 +13,8 @@ function Home() {
 
   return (
     <Container
-      size="xl"
+      fluid
+      px={'lg'}
       mih="100vh"
       style={{
         justifyContent: "center",

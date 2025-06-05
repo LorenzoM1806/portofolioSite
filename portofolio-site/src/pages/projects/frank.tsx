@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 function Frank() {
   const navigate = useNavigate();
   return (
-    <Container mt="xl" w={"100vw"}>
+    <Container mt="xl" fluid>
       <Box mb="lg">
         <Group gap="sm">
           <ActionIcon
@@ -44,57 +44,53 @@ function Frank() {
       <Grid>
         <Grid.Col span={7}>
           <Text>
-            Bij het vak Project 4.0 heeft onze groep een opdracht uitgevoerd
-            voor het bedrijf Rurant. Het team bestond uit studenten van
-            verschillende afstudeerrichtingen: twee vanuit Artificial
-            Intelligence, één vanuit Applied Computer Science (ACS) en twee
-            vanuit Application Development, waaronder ikzelf en Maarten Marx.
+            Bij het vak <strong>Project 4.0</strong> heeft onze groep een
+            opdracht uitgevoerd voor het bedrijf <strong>Rurant</strong>. Het
+            team bestond uit studenten van verschillende afstudeerrichtingen:
+            twee vanuit Artificial Intelligence, één vanuit Applied Computer
+            Science (ACS) en twee vanuit{" "}
+            <strong>Application Development</strong>, waaronder{" "}
+            <strong>ikzelf</strong> en <strong>Maarten Marx</strong>.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Rurant zet zich via het traject “Veerkrachtige Dorpen” in voor
-            leefbare en toekomstbestendige dorpen waarin inwoners graag wonen en
-            leven. Als participatiemedewerkers proberen ze zoveel mogelijk
-            bewoners bij dit proces te betrekken. Hiertoe maken ze gebruik van
-            digitale tools en sociale media, organiseren ze verdiepingssessies
-            en nemen ze deel aan lokale evenementen. Daarnaast zorgen ze voor
-            zichtbaarheid in het dorp met krijtsjablonen, banners, affiches en
-            infoborden.
+            Rurant zet zich via het traject{" "}
+            <strong>“Veerkrachtige Dorpen”</strong> in voor leefbare en
+            toekomstbestendige dorpen waarin inwoners graag wonen en leven. Als
+            participatiemedewerkers proberen ze zoveel mogelijk bewoners bij dit
+            proces te betrekken. Hiertoe maken ze gebruik van digitale tools en
+            sociale media, organiseren ze verdiepingssessies en nemen ze deel
+            aan lokale evenementen.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Onze opdracht was het ontwikkelen van “Frank de Bank”: een slimme
-            zitbank die met behulp van kunstmatige intelligentie (AI) vragen kan
-            stellen en live kan communiceren met gebruikers. Frank verzamelt zo
-            informatie over de locatie en de beleving van de omgeving.
+            Onze opdracht was het ontwikkelen van{" "}
+            <strong>“Frank de Bank”</strong>: een{" "}
+            <strong>slimme zitbank</strong> die met behulp van{" "}
+            <strong>AI</strong> vragen kan stellen en live kan communiceren met
+            gebruikers. Frank verzamelt zo informatie over de locatie en de
+            beleving van de omgeving.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Samen met Maarten Marx (Application Development) heb ik een
-            dashboard gerealiseerd waarin Rurant alle conversaties met Frank kan
-            inzien en beheren. Dit dashboard is opgebouwd in Angular en biedt de
-            mogelijkheid om enerzijds nieuwe vragen en antwoorden (fillers) toe
-            te voegen, en anderzijds de door gebruikers gestarte interacties te
-            raadplegen. Hiervoor hebben we tevens een REST-API ontwikkeld die
-            alle vragenlijstjes en conversaties verwerkt. De API stuurt via
-            WebSockets de data door naar onze AI-engine. Bovendien bevat het
-            dashboard een aparte pagina waarop alle afgeronde én lopende
-            conversaties overzichtelijk worden weergegeven.
+            Samen met Maarten Marx heb ik een <strong>dashboard</strong>{" "}
+            gerealiseerd waarin Rurant alle conversaties met Frank kan inzien en
+            beheren. Dit dashboard is opgebouwd in <strong>Angular</strong> en
+            maakt gebruik van een <strong>REST-API</strong> en{" "}
+            <strong>WebSockets</strong> om data te verwerken en door te sturen
+            naar de <strong>AI-engine</strong>.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Door deel te nemen aan dit project heb ik niet alleen mijn
-            technische (hard) skills kunnen aanscherpen, maar ook mijn soft
-            skills verder ontwikkeld. In het kader van peer evaluations
-            evalueerden wij elkaars bijdragen regelmatig. Daarnaast werkten we
-            continu aan onze presentatievaardigheden, zowel in info sessies voor
-            Rurant als tijdens onze eindpresentatie voor Rurant. Ten slotte
-            heeft dit project mijn ervaring met teamwork versterkt: ieder
-            teamlid had een duidelijke taak, maar we moesten onze afzonderlijke
-            onderdelen zo op elkaar afstemmen dat ze tot een geïntegreerd
-            eindproduct leidden.
+            Door deel te nemen aan dit project heb ik niet alleen mijn{" "}
+            <strong>technische skills</strong>, maar ook mijn{" "}
+            <strong>soft skills</strong> kunnen aanscherpen. Dankzij{" "}
+            <strong>peer evaluations</strong>, presentaties voor Rurant en goede{" "}
+            <strong>samenwerking</strong> binnen het team, heb ik mijn ervaring
+            op verschillende vlakken kunnen verdiepen.
           </Text>
         </Grid.Col>
+
         <Grid.Col span={5}>
           <Paper shadow="xl" w={"100%"}>
             <Container>

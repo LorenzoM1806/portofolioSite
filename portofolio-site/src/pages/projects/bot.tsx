@@ -25,7 +25,7 @@ import { IconArrowBigLeft } from "@tabler/icons-react";
 function Bot() {
   const navigate = useNavigate();
   return (
-    <Container mt="xl" w={"100vw"}>
+    <Container mt="xl" fluid>
       <Box mb="lg">
         <Group gap={"sm"}>
           <ActionIcon
@@ -65,42 +65,55 @@ function Bot() {
           </Carousel>
           <Space h={"md"} />
           <Text>
-            Voor het vak .NET Advanced kregen wij de opdracht om in duo’s een
-            zelfgekozen bot-idee uit te werken, binnen vooraf gestelde
-            randvoorwaarden. Wij kozen ervoor om een bot te ontwikkelen waarmee
-            gebruikers zich kunnen inschrijven voor opleidingen, inzicht krijgen
-            in aankomende evenementen en een overzicht kunnen opvragen van alle
-            beschikbare opleidingen.
+            Voor het vak <strong>.NET Advanced</strong> kregen wij de opdracht
+            om in duo’s een zelfgekozen <strong>bot-idee</strong> uit te werken,
+            binnen vooraf gestelde
+            <strong> randvoorwaarden</strong>. Wij kozen ervoor om een{" "}
+            <strong>bot</strong> te ontwikkelen waarmee gebruikers zich kunnen{" "}
+            <strong>inschrijven voor opleidingen</strong>, inzicht krijgen in{" "}
+            <strong>aankomende evenementen</strong> en een{" "}
+            <strong>overzicht</strong> kunnen opvragen van alle beschikbare
+            opleidingen.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
             Gebruikers kunnen via de bot aangeven voor welke specifieke
-            opleiding zij zich willen inschrijven. De bot verwerkt deze aanvraag
-            en bevestigt de inschrijving.
+            <strong> opleiding</strong> zij zich willen inschrijven. De bot{" "}
+            <strong>verwerkt</strong> deze aanvraag en{" "}
+            <strong>bevestigt</strong> de inschrijving.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            De bot toont een lijst met geplande evenementen die door de
-            organisatie worden georganiseerd. Zo blijven geïnteresseerden op de
-            hoogte van workshops, informatiedagen en andere relevante
-            bijeenkomsten.
+            De bot toont een <strong>lijst met geplande evenementen</strong> die
+            door de organisatie worden georganiseerd. Zo blijven
+            geïnteresseerden op de hoogte van
+            <strong> workshops</strong>, <strong>informatiedagen</strong> en
+            andere relevante
+            <strong> bijeenkomsten</strong>.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
-            Via een enkele opdracht kan de gebruiker een totaaloverzicht
-            opvragen van alle aangeboden opleidingen, inclusief korte
-            omschrijvingen.
+            Via een enkele opdracht kan de gebruiker een{" "}
+            <strong>totaaloverzicht </strong>
+            opvragen van alle aangeboden <strong>opleidingen</strong>, inclusief
+            korte
+            <strong> omschrijvingen</strong>.
           </Text>
-          <Space h={"md"} />
+          <Space h="md" />
           <Text>
             Om dit project tot een succes te maken, hebben we de bot op
-            Microsoft Azure gehost en een Conversational Language
-            Understanding-model (CLU) geïntegreerd. Door de CLU te trainen op
-            specifieke voorbeelden en intenties, konden we zorgen voor een
-            natuurlijke en contextbewuste interactie met de gebruikers.
-            Daarnaast hebben we een REST-API ontwikkeld en gekoppeld aan de
-            Azure-hosting, zodat data zoals inschrijvingen en eventinformatie
-            realtime beschikbaar is voor zowel de bot als externe systemen.
+            <strong> Microsoft Azure</strong> gehost en een{" "}
+            <strong>Conversational Language Understanding-model (CLU)</strong>{" "}
+            geïntegreerd. Door de CLU te trainen op
+            <strong> specifieke voorbeelden en intenties</strong>, konden we
+            zorgen voor een
+            <strong> natuurlijke en contextbewuste interactie</strong> met de
+            gebruikers. Daarnaast hebben we een <strong>REST-API</strong>{" "}
+            ontwikkeld en gekoppeld aan de
+            <strong> Azure-hosting</strong>, zodat data zoals inschrijvingen en
+            eventinformatie
+            <strong> realtime beschikbaar</strong> is voor zowel de bot als
+            externe systemen.
           </Text>
         </Grid.Col>
         <Grid.Col span={5}>

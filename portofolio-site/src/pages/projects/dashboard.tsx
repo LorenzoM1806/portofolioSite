@@ -26,7 +26,7 @@ import { IconArrowBigLeft } from "@tabler/icons-react";
 function Dashboard() {
   const navigate = useNavigate();
   return (
-    <Container mt="xl" w={"100vw"}>
+    <Container mt="xl" fluid>
       <Box mb="lg">
         <Group gap={"sm"}>
           <ActionIcon
@@ -98,41 +98,51 @@ function Dashboard() {
         </Grid.Col>
       </Grid>
       <Text>
-        Tijdens mijn bacheloropleiding Toegepaste Informatica kregen we de kans
-        om te werken met Qlik, een krachtig platform voor data-analyse en
-        datavisualisatie. Qlik stelt gebruikers in staat om verbinding te maken
-        met diverse databronnen, data te transformeren en interactieve
-        dashboards en rapporten te bouwen die datagedreven inzichten bieden en
-        de besluitvorming ondersteunen.
+        Tijdens mijn <strong>bacheloropleiding Toegepaste Informatica</strong>{" "}
+        kregen we de kans om te werken met <strong>Qlik</strong>, een krachtig
+        platform voor <strong>data-analyse</strong> en
+        <strong> datavisualisatie</strong>. Qlik stelt gebruikers in staat om
+        verbinding te maken met diverse databronnen, data te transformeren en
+        interactieve
+        <strong> dashboards en rapporten</strong> te bouwen die{" "}
+        <strong>datagedreven inzichten</strong> bieden en de besluitvorming
+        ondersteunen.
       </Text>
       <Space h={"md"} />
       <Text>
-        Binnen het vak Datavisualisatie kregen we een grondige introductie in de
-        mogelijkheden van Qlik, waaronder het opstellen van datamodellen, het
-        toepassen van filters, het maken van grafieken en het bouwen van
-        dashboards die gericht zijn op het vertellen van een verhaal met data.
+        Binnen het vak <strong>Datavisualisatie</strong> kregen we een grondige
+        introductie in de mogelijkheden van Qlik, waaronder het opstellen van{" "}
+        <strong>datamodellen</strong>, het toepassen van{" "}
+        <strong>filters</strong>, het maken van <strong>grafieken</strong> en
+        het bouwen van dashboards die gericht zijn op het{" "}
+        <strong>vertellen van een verhaal met data</strong>.
       </Text>
       <Space h={"md"} />
       <Text>
-        Als eindopdracht kregen we de taak om zelf een dashboard te ontwikkelen
-        op basis van een uitgebreide dataset over verkeersongevallen in België.
-        De bedoeling was om een datagedreven verhaal te vertellen dat bijdraagt
-        aan het verhogen van het verkeersveiligheidsbewustzijn.
+        Als <strong>eindopdracht</strong> kregen we de taak om zelf een
+        dashboard te ontwikkelen op basis van een uitgebreide dataset over{" "}
+        <strong>verkeersongevallen in België</strong>. De bedoeling was om een{" "}
+        <strong>datagedreven verhaal</strong> te vertellen dat bijdraagt aan het
+        verhogen van het <strong>verkeersveiligheidsbewustzijn</strong>.
       </Text>
       <Space h={"md"} />
       <Text>
         Concreet analyseerden we verschillende aspecten van de dataset, zoals
-        ongevaltypes, locaties, tijdstippen, weersomstandigheden en betrokken
-        weggebruikers. Door middel van interactieve grafieken, kaarten en
-        filters hebben we inzichten gevisualiseerd waarmee beleidsmakers of
+        <strong> ongevaltypes</strong>, <strong>locaties</strong>,{" "}
+        <strong>tijdstippen</strong>, <strong>weersomstandigheden</strong> en{" "}
+        <strong>betrokken weggebruikers</strong>. Door middel van interactieve
+        grafieken, kaarten en filters hebben we{" "}
+        <strong>inzichten gevisualiseerd</strong> waarmee beleidsmakers of
         veiligheidsdiensten gerichter maatregelen kunnen treffen.
       </Text>
       <Space h={"md"} />
       <Text>
-        Deze opdracht bood niet alleen een technische uitdaging op vlak van
-        datamodellering en visualisatie, maar legde ook de nadruk op het
-        maatschappelijke belang van data-analyse: het omzetten van ruwe data
-        naar bruikbare inzichten voor een veiliger Belgisch verkeer.
+        Deze opdracht bood niet alleen een <strong>technische uitdaging</strong>{" "}
+        op vlak van datamodellering en visualisatie, maar legde ook de nadruk op
+        het
+        <strong> maatschappelijke belang van data-analyse</strong>: het omzetten
+        van ruwe data naar <strong>bruikbare inzichten</strong> voor een{" "}
+        <strong>veiliger Belgisch verkeer</strong>.
       </Text>
     </Container>
   );

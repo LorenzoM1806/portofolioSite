@@ -27,14 +27,14 @@ import { Carousel } from "@mantine/carousel";
 
 function Stage() {
   return (
-    <Container mt="xl">
+    <Container fluid mih={"100vh"} style={{ justifyContent: "center", alignItems: "center" }}>
       {/* Page Title */}
       <Box mb="lg">
         <Title order={2}>Stage</Title>
         <Divider mt="xs" size="lg" color="#e14631" />
       </Box>
 
-      <Grid>
+      <Grid w={'100%'}>
         <Grid.Col span={6}>
           <Box mb="lg">
             <Title order={4}>Het stage bedrijf</Title>
@@ -61,7 +61,7 @@ function Stage() {
               <Image
                 src={ventigratelogo}
                 alt="Ventigrate Logo"
-                width={350}
+                width={250}
                 fit="contain"
                 style={{ padding: 15 }}
               />
@@ -87,7 +87,7 @@ function Stage() {
         </Text>
       </Box>
 
-      <Grid>
+      <Grid gutter={'md'}>
         <Grid.Col span={6}>
           <Box mb="lg">
             <Title order={4}>Het resultaat</Title>
@@ -105,7 +105,7 @@ function Stage() {
           </Box>
         </Grid.Col>
         <Grid.Col span={6}>
-          <Carousel withIndicators h={250} w={"auto"}>
+          <Carousel withIndicators h={250} w={"100%"} maw={600}>
             <Carousel.Slide>
               <Image
                 src={login}
@@ -131,6 +131,7 @@ function Stage() {
                 height={250}
                 controls
                 muted
+                width={'100%'}
                 style={{ display: "block" }}
               />
             </Carousel.Slide>
@@ -140,6 +141,7 @@ function Stage() {
                 height={250}
                 controls
                 muted
+                width={'100%'}
                 style={{ display: "block" }}
               />
             </Carousel.Slide>
@@ -149,6 +151,7 @@ function Stage() {
                 height={250}
                 controls
                 muted
+                width={'100%'}
                 style={{ display: "block" }}
               />
             </Carousel.Slide>
@@ -159,6 +162,7 @@ function Stage() {
                 height={250}
                 controls
                 muted
+                width={'100%'}
                 style={{ display: "block" }}
               />
             </Carousel.Slide>

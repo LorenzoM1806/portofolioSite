@@ -43,60 +43,45 @@ function Roos() {
       <Grid>
         <Grid.Col span={7}>
           <Text>
-            In het kader van mijn{" "}
-            <strong>graduaatsopleiding Programmeren</strong> hebben wij in
-            <strong> teamverband</strong> een <strong>website ontwikkeld</strong>{" "}
-            voor een echte klant:
-            <strong> Club Roos</strong> (Atelier Marjelle Roose). De site moest
-            de volgende delen aanwezig hebben:
+            In het kader van mijn <strong>graduaatsopleiding Programmeren</strong> hebben wij in
+            teamverband een website ontwikkeld voor een echte klant: <strong>Club Roos </strong>
+            (Atelier Marjelle Roose). De site moest de volgende delen aanwezig
+            hebben:
             <Space h={"xs"} />
             <List>
-              <List.Item>
-                <strong>Interieur pagina</strong>
-              </List.Item>
-              <List.Item>
-                <strong>Over mij pagina</strong>
-              </List.Item>
-              <List.Item>
-                <strong>Instagram pagina</strong>
-              </List.Item>
-              <List.Item>
-                <strong>Contact pagina</strong>
-              </List.Item>
-              <List.Item>
-                <strong>Webshop pagina</strong>
-              </List.Item>
-              <List.Item>
-                <strong>Workshop pagina</strong>
-              </List.Item>
-              <List.Item>
-                <strong>Keramiek pagina</strong>
-              </List.Item>
+              <List.Item>Interieur pagina</List.Item>
+              <List.Item>Over mij pagina</List.Item>
+              <List.Item>Instagram pagina</List.Item>
+              <List.Item>Contact pagina</List.Item>
+              <List.Item>Webshop pagina</List.Item>
+              <List.Item>Workshop pagina</List.Item>
+              <List.Item>Keramiek pagina</List.Item>
             </List>
             <Space h={"md"} />
             Aan het einde van het project koos de opdrachtgever onze inzending
-            als
-            <strong> winnende website</strong>. Met enkele kleine aanpassingen
-            wordt deze site nog steeds gebruikt als de{" "}
-            <strong>officiële online aanwezigheid</strong> van Club Roos.
+            als <strong>winnende website. </strong> Met enkele kleine aanpassingen wordt deze site
+            nog steeds gebruikt als de officiële online aanwezigheid van Club
+            Roos.
           </Text>
         </Grid.Col>
 
         <Grid.Col span={5}>
-          <Paper shadow="xl" w={"100%"}>
+          <Paper shadow="xl" w={"100%"} withBorder>
             <Container>
               <Title order={2}>Project informatie</Title>
               <Divider my={"sm"} w={"99%"} />
               <Text>Opleiding: Graduaat Programmeren</Text>
               <Text>Vak: Projecten voor het werkveld</Text>
+              <Space h={'md'}/>
               <Text>
-                Technologiën:
+                Gebruikte Technologiën:
                 <List>
                   <List.Item>WordPress</List.Item>
                 </List>
               </Text>
+              <Space h={'md'}/>
               <Text>
-                Groep:
+                Het Team:
                 <List>
                   <List.Item>Stijn Van Hees</List.Item>
                   <List.Item>Yenebeb Daniel Fikre</List.Item>
@@ -104,6 +89,7 @@ function Roos() {
                   <List.Item>Jessica Van Craen</List.Item>
                 </List>
               </Text>
+              <Space h={'md'}/>
               <Text>
                 De website:{" "}
                 <Anchor

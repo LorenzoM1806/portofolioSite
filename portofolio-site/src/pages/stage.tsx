@@ -41,8 +41,8 @@ function Stage() {
             <Space h="sm" />
             <Text>
               In het laatste jaar van mijn opleiding Toegepaste Informatica had
-              ik de kans om gedurende een periode van 13 weken stage te lopen
-              bij Ventigrate, gevestigd in Kontich. Ventigrate maakt deel uit
+              ik de kans om gedurende een periode van <strong>13 weken stage</strong> te lopen
+              bij <strong>Ventigrate</strong>, gevestigd in Kontich. Ventigrate maakt deel uit
               van de Cronos Groep en is actief in de consultancysector, met een
               sterke focus op Microsoft-technologieën. Het bedrijf specialiseert
               zich in oplossingen rond SharePoint, Microsoft 365, en het Power
@@ -74,15 +74,15 @@ function Stage() {
         <Title order={4}>De Opdracht</Title>
         <Space h="sm" />
         <Text>
-          Tijdens mijn stage kreeg ik de opdracht om een interne dartsapplicatie
-          te ontwikkelen. Deze applicatie werd opgebouwd met React als
-          frontend-framework, waarbij ik gebruikmaakte van Mantine CSS om een
+          Tijdens mijn stage kreeg ik de opdracht om een <strong>interne dartsapplicatie</strong>
+          te ontwikkelen. Deze applicatie werd opgebouwd met <strong>React</strong> als
+          frontend-framework, waarbij ik gebruikmaakte van <strong>Mantine CSS</strong> om een
           gebruiksvriendelijke en moderne interface te creëren. Voor de backend
-          werd gekozen voor Microsoft SQL Server (MSSQL) als databasesysteem,
+          werd gekozen voor <strong>Microsoft SQL Server (MSSQL)</strong> als databasesysteem,
           wat zorgde voor een robuuste en betrouwbare dataverwerking. Daarnaast
           kreeg ik de kans om mijn communicatie- en overlegvaardigheden verder
-          te ontwikkelen. Dankzij de dagelijkse stand-up meetings en de
-          demomeetings aan het einde van elke sprint kon ik regelmatig mijn
+          te ontwikkelen. Dankzij de <strong>dagelijkse stand-up meetings</strong> en de
+          <strong> demomeetings</strong> aan het einde van elke sprint kon ik regelmatig mijn
           voortgang delen en actief deelnemen aan het agile werkproces.
         </Text>
       </Box>
@@ -97,9 +97,9 @@ function Stage() {
               afgewerkte product. Daarnaast zijn er ook enkele video’s
               beschikbaar die het verloop van de verschillende spelmodi in beeld
               brengen. Hieronder vindt u vijf documenten terug. Drie daarvan –
-              het projectplan, realisatieverslag en de reflectie – beschrijven
+              <strong> het projectplan, realisatieverslag en de reflectie</strong> – beschrijven
               het volledige verloop van de stage. De andere twee documenten – de
-              user guide en installation guide – zijn interne handleidingen die
+              <strong> user guide en installation guide</strong> – zijn interne handleidingen die
               specifiek voor het bedrijf werden opgesteld.
             </Text>
           </Box>

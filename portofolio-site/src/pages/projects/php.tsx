@@ -47,76 +47,68 @@ function Php() {
       <Grid>
         <Grid.Col span={7}>
           <Text>
-            In het tweede semester van het academiejaar{" "}
-            <strong>2023-2024</strong> hebben wij voor het vak{" "}
-            <strong>PHP</strong> een groepsproject uitgewerkt, voortbouwend op
-            de design-rapporten van het eerste semester. Onze opdrachtgever was 
-            <strong> Hans Bartholomeus</strong>.
+            In het tweede semester van het academiejaar 2023-2024 hebben wij
+            voor het <strong>vak PHP</strong> een groepsproject uitgewerkt,
+            voortbouwend op de design-rapporten van het eerste semester. Onze
+            opdrachtgever was
+            <strong> Hans Bartholomeus.</strong>
           </Text>
           <Space h="md" />
           <Text>
-            Voor dit project ontwikkelden we een <strong>website</strong> ter
-            ondersteuning van een jaarlijkse <strong>wielerwedstrijd</strong>.
-            De site moest verschillende
-            <strong> functionaliteiten</strong> bieden voor de organisatie.
+            Voor dit project ontwikkelden we een website ter ondersteuning van
+            een <strong>jaarlijkse wielerwedstrijd.</strong> De site moest
+            verschillende functionaliteiten bieden voor de organisatie.
           </Text>
           <Space h="md" />
           <Text>
             Teams moesten zich via de website kunnen{" "}
-            <strong>registreren</strong>. Na inschrijving ontvingen zij
+            <strong>registreren.</strong> Na inschrijving ontvingen zij
             automatisch een <strong>bevestigingsmail</strong> met
-            <strong> betalingsinstructies</strong>. Bij uitblijvende betaling
-            volgde een
-            <strong>herinneringsmail</strong>.
+            betalingsinstructies. Bij uitblijvende betaling volgde een
+            <strong> herinneringsmail.</strong>
           </Text>
           <Space h="md" />
           <Text>
             Er werd een <strong>login‐module</strong> opgezet zodat enkel
-            bevoegde
-            <strong> organisatoren</strong> toegang kregen tot hun pagina’s. Zo
-            bleven
-            <strong> vertrouwelijke gegevens</strong> zoals deelnemerslijsten
-            afgeschermd.
+            bevoegde organisatoren toegang kregen tot hun pagina’s. Zo bleven
+            vertrouwelijke gegevens zoals deelnemerslijsten afgeschermd.
           </Text>
           <Space h="md" />
           <Text>
-            De verantwoordelijke organisator kon via een{" "}
-            <strong>drag-and-drop interface </strong>
-             de <strong>startvolgorde</strong> bepalen. Bij bevestiging werd
+            De verantwoordelijke organisator kon via een drag-and-drop interface
+            de <strong>startvolgorde</strong> bepalen. Bij bevestiging werd
             automatisch een
             <strong> PDF-bestand</strong> gegenereerd en verzonden.
           </Text>
           <Space h="md" />
           <Text>
-            Tijdens de wedstrijddag kon een <strong>wedstrijdsecretaris</strong>{" "}
-            ploegen
-            <strong> aanmelden</strong> en elk team een{" "}
-            <strong>rugnummer</strong> toewijzen, voor een vlot
-            wedstrijdverloop.
+            Tijdens de wedstrijddag kon een wedstrijdsecretaris{" "}
+            <strong>ploegen aanmelden</strong> en elk team een rugnummer
+            toewijzen, voor een vlot wedstrijdverloop.
           </Text>
           <Space h="md" />
           <Text>
-            Op een aparte pagina konden <strong>motors</strong> en{" "}
-            <strong>starttijden</strong> worden toegewezen. De{" "}
-            <strong>tijdspagina</strong> liet toe om per team rondetijden
-            <strong> automatisch op te slaan</strong>.
+            Op een aparte pagina konden motors en starttijden worden toegewezen.
+            De tijdspagina liet toe om per team <strong>rondetijden</strong>{" "}
+            automatisch op te slaan.
           </Text>
           <Space h="md" />
           <Text>
             Tot slot werd een <strong>live-klassementspagina</strong>{" "}
-            ontwikkeld. Na afloop kon het
-            <strong> definitieve klassement</strong> als <strong>PDF</strong>{" "}
-            worden verzonden of afgedrukt.
+            ontwikkeld. Na afloop kon het{" "}
+            <strong>definitieve klassement</strong> als PDF worden verzonden of
+            afgedrukt.
           </Text>
         </Grid.Col>
 
         <Grid.Col span={5}>
-          <Paper shadow="xl" w={"100%"}>
+          <Paper shadow="xl" w={"100%"} withBorder>
             <Container>
               <Title order={2}>Project informatie</Title>
               <Divider my={"sm"} w={"99%"} />
               <Text>Opleiding: Bachelor Toegepaste Informatica</Text>
               <Text>Vak: PhP</Text>
+              <Space h={"md"} />
               <Text>
                 Technologiën:
                 <List>
@@ -124,6 +116,7 @@ function Php() {
                   <List.Item>bootstrap</List.Item>
                 </List>
               </Text>
+              <Space h={"md"} />
               <Text>
                 Groep:
                 <List>
@@ -132,6 +125,7 @@ function Php() {
                   <List.Item>Illias Safiullien</List.Item>
                 </List>
               </Text>
+              <Space h={"md"} />
               <Text>
                 Github:{" "}
                 <Anchor
@@ -156,12 +150,12 @@ function Php() {
               </Text>
             </Container>
           </Paper>
-          <Space h={"md"}></Space>
-          <Image src={klassement} w={600} />
-          <Space h={"md"}></Space>
-          <Image src={tijd} w={600} />
         </Grid.Col>
       </Grid>
+      <Group>
+        <Image src={klassement} w={550} />
+        <Image src={tijd} w={550} />
+      </Group>
     </Container>
   );
 }

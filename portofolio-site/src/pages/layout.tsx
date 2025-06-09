@@ -1,66 +1,76 @@
-import { 
-  AppShell, 
-  Burger, 
-  NavLink, 
-  Text, 
-  useMantineTheme, 
+// src/pages/Layout.tsx
+import React from "react";
+import {
+  AppShell,
+  Burger,
+  Text,
+  useMantineTheme,
   ActionIcon,
   Group,
   Avatar,
   Stack,
   Center,
-  Anchor
-} from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { useLocation, Link } from 'react-router-dom';
+  Anchor,
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { href, useLocation } from "react-router-dom";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
+  IconMail,
   IconHome,
   IconUser,
   IconBuilding,
   IconPresentation,
-  IconMail
-} from '@tabler/icons-react';
-import foto from "../assets/avatar.jpg"
+} from "@tabler/icons-react";
+import foto from "../assets/avatar.jpg";
+import { useActiveSection } from "../pages/useActiveSection" // adjust the path
 
+/**
+ * Layout met een zijbalk die:
+ * - via <Anchor href="#home"> … </Anchor> hash‐scrollt naar de secties
+ * - inspeelt op de huidige locatie.hash om icoon‐kleur te veranderen
+ */
 export default function Layout({ children }: { children: React.ReactNode }) {
   const theme = useMantineTheme();
   const [opened, { toggle }] = useDisclosure(false);
-  const { pathname } = useLocation();
+  const sectionIds = ["home", "over-mij", "stage", "projecten", "contact"];
+  const activeHash = useActiveSection(sectionIds);
 
+  // Definieer de navigation items inclusief de anchor‐href
   const navItems = [
-    { label: 'Home', path: '/', icon: <IconHome/> },
-    { label: 'Over Mij', path: '/over-mij', icon: <IconUser/> },
-    { label: 'Stage', path: '/stage', icon: <IconBuilding/> },
-    { label: 'Projecten', path: '/realisaties', icon: <IconPresentation/> },
+    { label: "Home", href: "#home", Icon: IconHome },
+    { label: "Over Mij", href: "#over-mij", Icon: IconUser },
+    { label: "Stage", href: "#stage", Icon: IconBuilding },
+    { label: "Projecten", href: "#projecten", Icon: IconPresentation },
+    { label: "Contact", href: "#contact", Icon: IconMail },
   ];
 
   return (
     <AppShell
       padding="lg"
       navbar={{
-        width: { sm: 150, lg: 350 },
-        breakpoint: 'sm',
+        width: { sm: 150, lg: 250 },
+        breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
-      // Removing the header prop entirely
       styles={{
         navbar: {
-          backgroundColor: '#1c2123',
+          backgroundColor: "#1c2123",
         },
         main: {
-          width: '100%'
-        }
+          width: "100%",
+        },
       }}
     >
+      {/* ── Navbar / Zijbalk ───────────────────────────────────────────────────── */}
       <AppShell.Navbar p="md">
-        {/* Top section in navbar: Personal branding and burger */}
+        {/* Top‐sectie: burger-menu + avatar */}
         <div
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
             marginBottom: theme.spacing.md,
           }}
         >
@@ -71,69 +81,82 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             size="sm"
             color={theme.colors.gray[6]}
           />
-          <Stack align='center'>
-            <Avatar src={foto} w={'auto'} h={150}/>
-            <Text fw={700} color="white" ml="sm">
+          <Stack align="center">
+            <Avatar src={foto} w={"auto"} h={80} />
+            <Text fw={700} color="white">
               Lorenzo Miechielsen
             </Text>
           </Stack>
-          
         </div>
 
+        {/* Links naar secties: active wordt true als hash === href */}
         <AppShell.Section grow>
-          {navItems.map(({ label, path, icon }) => (
-            <NavLink
-              key={path}
-              component={Link}
-              to={path}
-              label={label}
-              leftSection={icon}
-              active={pathname === path}
-              styles={(theme, { active }) => ({
-                root: {
+          {navItems.map(({ label, href, Icon }) => {
+            const isActive = activeHash === href; // true of false
+
+            return (
+              <Anchor
+                key={href}
+                href={href}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
                   padding: theme.spacing.sm,
                   borderRadius: theme.radius.sm,
-                  color: active ? '#fff' : theme.colors.gray[4],
-                  backgroundColor: active ? '#e14631' : 'transparent',
-                  '&:hover': {
-                    backgroundColor: active ? '#e14631' : '#2a2f31',
-                  },
-                },
-                label: {
-                  fontWeight: active ? 600 : 400,
-                },
-              })}
-            />
-          ))}
+                  color: isActive ? "#fff" : theme.colors.gray[4],
+                  backgroundColor: isActive ? "#e14631" : "transparent",
+                  textDecoration: "none",
+                  marginBottom: theme.spacing.xs,
+                }}
+                onClick={() => {
+                  // op mobiel: sluit burger‐menu
+                  if (opened) toggle();
+                }}
+              >
+                {/* Kleur van het icoon aanpassen: rood als actief, anders grijs */}
+                <Icon
+                  size={20}
+                  color={isActive ? "white" : theme.colors.gray[4]}
+                />
+                <Text ml="sm" fw={isActive ? 600 : 400}>
+                  {label}
+                </Text>
+              </Anchor>
+            );
+          })}
         </AppShell.Section>
+
+        {/* Social‐iconrij onderaan */}
         <Center>
-        <div>
           <Group gap="xl" align="center">
-      {/* GitHub-link */}
-      <Anchor href="https://github.com/LorenzoM1806" target="_blank" rel="noopener noreferrer">
-        <ActionIcon variant="subtle" color="#e14631" size="xl">
-          <IconBrandGithub size="xl" />
-        </ActionIcon>
-      </Anchor>
-
-      {/* LinkedIn-link */}
-      <Anchor href="https://www.linkedin.com/in/lorenzo-miechielsen-82602b27a/" target="_blank" rel="noopener noreferrer">
-        <ActionIcon variant="subtle" color="#e14631" size="xl">
-          <IconBrandLinkedin size="xl" />
-        </ActionIcon>
-      </Anchor>
-
-      {/* E-mail-link */}
-      <Anchor href="mailto:lorenzomiechielsen@hotmail.com">
-        <ActionIcon variant="subtle" color="#e14631" size="xl">
-          <IconMail size="xl" />
-        </ActionIcon>
-      </Anchor>
-    </Group>
-        </div>
+            <Anchor
+              href="https://github.com/LorenzoM1806"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ActionIcon variant="subtle" color="#e14631" size="xl">
+                <IconBrandGithub size="xl" />
+              </ActionIcon>
+            </Anchor>
+            <Anchor
+              href="https://www.linkedin.com/in/lorenzo-miechielsen-82602b27a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ActionIcon variant="subtle" color="#e14631" size="xl">
+                <IconBrandLinkedin size="xl" />
+              </ActionIcon>
+            </Anchor>
+            <Anchor href="mailto:lorenzomiechielsen@hotmail.com">
+              <ActionIcon variant="subtle" color="#e14631" size="xl">
+                <IconMail size="xl" />
+              </ActionIcon>
+            </Anchor>
+          </Group>
         </Center>
       </AppShell.Navbar>
 
+      {/* ── Main content ─────────────────────────────────────────────────────── */}
       <AppShell.Main>{children}</AppShell.Main>
     </AppShell>
   );

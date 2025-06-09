@@ -11,7 +11,8 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <MantineProvider>
-        <Routing/>
+        <Routing>
+        </Routing>
       </MantineProvider>
     </BrowserRouter>
   </StrictMode>

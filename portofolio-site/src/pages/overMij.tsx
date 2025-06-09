@@ -43,8 +43,8 @@ function OverMij() {
 
           <Stack gap="md" style={{ flex: 1 }}>
             <Text>
-              Hallo, mijn naam is Lorenzo. Ik woon in Beerse en ben student
-              Toegepaste Informatica – Application Development aan de Thomas
+              Hallo, mijn naam is Lorenzo. Ik woon in <strong>Beerse</strong> en ben student
+              <strong>Toegepaste Informatica – Application Development</strong> aan de Thomas
               More hogeschool. Momenteel zit ik in het laatste jaar van mijn
               opleiding.
             </Text>
@@ -56,12 +56,12 @@ function OverMij() {
               vormde de aanleiding voor mijn keuze om het Graduaat Programmeren
               te volgen. Op lange termijn is het mijn doel om een eigen
               onderneming op te richten die via technologie bijdraagt aan een
-              veiligere en toekomstgerichte samenleving.
+              <strong> veiligere en toekomstgerichte samenleving.</strong>
             </Text>
 
             <Text>
-              Ik ben een leergierige, analytisch denkende ontwikkelaar. Ik werk
-              graag in teamverband, maar neem ook zelfstandig
+              Ik ben een <strong>leergierige, analytisch</strong> denkende ontwikkelaar. Ik werk
+              graag in <strong>teamverband</strong>, maar neem ook <strong>zelfstandig </strong>
               verantwoordelijkheid voor mijn werk. Wat mij het meeste
               aanspreekt, is het bouwen van praktische toepassingen die echt
               gebruikt worden.
@@ -371,7 +371,7 @@ function OverMij() {
 
         {/* Download CV-knop */}
         <Group mt="xl">
-          <Button color="#e14631">Download CV</Button>
+          <Button href="../public/Lorenzo Miechielsen.pdf" component="a" color="#e14631" download radius={'md'} size="md">Download CV</Button>
         </Group>
       </Container>
     </>

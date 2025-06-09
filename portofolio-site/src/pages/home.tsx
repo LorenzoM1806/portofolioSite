@@ -15,7 +15,6 @@ function Home() {
     <Container
       fluid
       px={'lg'}
-      mih="100vh"
       style={{
         justifyContent: "center",
         alignItems: "center",

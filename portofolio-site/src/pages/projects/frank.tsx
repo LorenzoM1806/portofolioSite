@@ -45,61 +45,67 @@ function Frank() {
         <Grid.Col span={7}>
           <Text>
             Bij het vak <strong>Project 4.0</strong> heeft onze groep een
-            opdracht uitgevoerd voor het bedrijf <strong>Rurant</strong>. Het
-            team bestond uit studenten van verschillende afstudeerrichtingen:
-            twee vanuit Artificial Intelligence, één vanuit Applied Computer
-            Science (ACS) en twee vanuit{" "}
-            <strong>Application Development</strong>, waaronder{" "}
-            <strong>ikzelf</strong> en <strong>Maarten Marx</strong>.
+            opdracht uitgevoerd voor het bedrijf Rurant. Het team bestond uit
+            studenten van
+            <strong> verschillende afstudeerrichtingen</strong>: twee vanuit
+            Artificial Intelligence, één vanuit Applied Computer Science (ACS)
+            en twee vanuit Application Development, waaronder ikzelf en Maarten
+            Marx.
           </Text>
           <Space h="md" />
           <Text>
             Rurant zet zich via het traject{" "}
-            <strong>“Veerkrachtige Dorpen”</strong> in voor leefbare en
-            toekomstbestendige dorpen waarin inwoners graag wonen en leven. Als
-            participatiemedewerkers proberen ze zoveel mogelijk bewoners bij dit
-            proces te betrekken. Hiertoe maken ze gebruik van digitale tools en
-            sociale media, organiseren ze verdiepingssessies en nemen ze deel
-            aan lokale evenementen.
+            <strong>“Veerkrachtige Dorpen”</strong> in voor
+            <strong> leefbare en toekomstbestendige</strong> dorpen waarin
+            inwoners graag wonen en leven. Als participatiemedewerkers proberen
+            ze zoveel mogelijk bewoners bij dit proces te betrekken. Hiertoe
+            maken ze gebruik van digitale tools en sociale media, organiseren ze
+            verdiepingssessies en nemen ze deel aan lokale evenementen.
           </Text>
           <Space h="md" />
           <Text>
-            Onze opdracht was het ontwikkelen van{" "}
-            <strong>“Frank de Bank”</strong>: een{" "}
-            <strong>slimme zitbank</strong> die met behulp van{" "}
-            <strong>AI</strong> vragen kan stellen en live kan communiceren met
-            gebruikers. Frank verzamelt zo informatie over de locatie en de
-            beleving van de omgeving.
+            Onze opdracht was het ontwikkelen van “Frank de Bank”: een slimme
+            zitbank die met behulp van <strong>AI</strong> vragen kan stellen en
+            live kan
+            <strong> communiceren met gebruikers</strong>. Frank verzamelt zo
+            informatie over de locatie en de beleving van de omgeving.
           </Text>
           <Space h="md" />
           <Text>
             Samen met Maarten Marx heb ik een <strong>dashboard</strong>{" "}
             gerealiseerd waarin Rurant alle conversaties met Frank kan inzien en
             beheren. Dit dashboard is opgebouwd in <strong>Angular</strong> en
-            maakt gebruik van een <strong>REST-API</strong> en{" "}
-            <strong>WebSockets</strong> om data te verwerken en door te sturen
-            naar de <strong>AI-engine</strong>.
+            maakt gebruik van een <strong>REST-API</strong>
+            en <strong>WebSockets</strong> om data te verwerken en door te
+            sturen naar de AI-engine. Tot slot stonden wij in voor de
+            uiteindelijke integratie van alle componenten. Hiervoor werd een
+            <strong>Raspberry Pi</strong> ingezet om de verschillende onderdelen met elkaar te
+            verbinden. Zowel de <strong>microfoon en luidspreker</strong> als de AI-componenten
+            werden gekoppeld aan dit centrale systeem, zodat een samenhangend
+            geheel ontstond. De werking werd aangestuurd via één <strong>Python-script </strong>
+            dat op de Raspberry Pi werd uitgevoerd en instond voor het
+            coördineren van de volledige functionaliteit.
           </Text>
           <Space h="md" />
           <Text>
-            Door deel te nemen aan dit project heb ik niet alleen mijn{" "}
-            <strong>technische skills</strong>, maar ook mijn{" "}
-            <strong>soft skills</strong> kunnen aanscherpen. Dankzij{" "}
-            <strong>peer evaluations</strong>, presentaties voor Rurant en goede{" "}
-            <strong>samenwerking</strong> binnen het team, heb ik mijn ervaring
-            op verschillende vlakken kunnen verdiepen.
+            Door deel te nemen aan dit project heb ik niet alleen mijn
+            technische skills, maar ook mijn soft skills kunnen aanscherpen.
+            Dankzij peer evaluations, presentaties voor Rurant en goede
+            samenwerking binnen het team, heb ik mijn ervaring op verschillende
+            vlakken kunnen verdiepen.
           </Text>
         </Grid.Col>
 
         <Grid.Col span={5}>
-          <Paper shadow="xl" w={"100%"}>
+          <Paper shadow="xl" withBorder w={"100%"}>
             <Container>
               <Title order={2}>Project informatie</Title>
               <Divider my={"sm"} w={"99%"} />
               <Text>Opleiding: Bachelor Toegepaste Informatica</Text>
               <Text>Vak: Project 4.0</Text>
+              <Space h={'md'}></Space>
               <Text>
-                Technologiën:
+                Gebruikte Technologiën:
                 <List>
                   <List.Item>Angular</List.Item>
                   <List.Item>Python</List.Item>
@@ -109,8 +115,9 @@ function Frank() {
                   <List.Item>Raspberry Pi</List.Item>
                 </List>
               </Text>
+              <Space h={'md'}></Space>
               <Text>
-                Groep:
+                Het Team:
                 <List>
                   <List.Item>Maarten Marx</List.Item>
                   <List.Item>Filip Kolb</List.Item>
@@ -118,6 +125,7 @@ function Frank() {
                   <List.Item>Egemen alkan</List.Item>
                 </List>
               </Text>
+              <Space h={'md'}></Space>
               <Text>
                 Github:{" "}
                 <Anchor

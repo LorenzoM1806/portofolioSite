@@ -13,7 +13,6 @@ import {
   Anchor,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { href, useLocation } from "react-router-dom";
 import {
   IconBrandGithub,
   IconBrandLinkedin,

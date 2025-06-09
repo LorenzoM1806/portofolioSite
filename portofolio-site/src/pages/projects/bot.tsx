@@ -21,7 +21,6 @@ import event from "../../assets/projects/universityBot/events.png";
 import intent from "../../assets/projects/universityBot/intents.png";
 import { useNavigate } from "react-router-dom";
 import { IconArrowBigLeft } from "@tabler/icons-react";
-import Spa from "../../spa";
 
 function Bot() {
   const navigate = useNavigate();

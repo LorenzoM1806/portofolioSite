@@ -371,7 +371,7 @@ function OverMij() {
 
         {/* Download CV-knop */}
         <Group mt="xl">
-          <Button href="../public/Lorenzo Miechielsen.pdf" component="a" color="#e14631" download radius={'md'} size="md">Download CV</Button>
+          <Button href="/Lorenzo Miechielsen.pdf" component="a" color="#e14631" download radius={'md'} size="md">Download CV</Button>
         </Group>
       </Container>
     </>

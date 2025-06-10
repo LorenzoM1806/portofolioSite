@@ -36,7 +36,7 @@ function Home() {
         </Text>
 
         <Group mt="md">
-          <Button onClick={() => navigate("#over-mij")} variant="filled" color="#e14631">
+          <Button onClick={() => document.getElementById("over-mij")} variant="filled" color="#e14631">
             Over Mij
           </Button>
           <Button variant="filled" color="#e14631" onClick={() => navigate("#realisaties")}>

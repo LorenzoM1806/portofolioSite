@@ -200,11 +200,11 @@ function Stage() {
       <Box mb={"lg"}>
         <Title order={4}>Documenten</Title>
         <List mt="sm" spacing="xs">
-          <List.Item>Projectplan</List.Item>
-          <List.Item>Realisatieverslag</List.Item>
-          <List.Item>Reflectie</List.Item>
-          <List.Item>User guide</List.Item>
-          <List.Item>Installation guide</List.Item>
+          <List.Item>Projectplan: <a href="/Projectplan.pdf" color="#e14631">Projectplan</a></List.Item>
+          <List.Item>Realisatieverslag: <a href="/realizatiedocument.pdf" color="#e14631"></a></List.Item>
+          <List.Item>Reflectie: <a href="/reflectie.pdf" color="#e14631"></a></List.Item>
+          <List.Item>User guide: <a href="/User guide.pdf" color="#e14631"></a></List.Item>
+          <List.Item>Installation guide: <a href="/installation guide.pdf" color="#e14631"></a></List.Item>
         </List>
       </Box>
     </Container>

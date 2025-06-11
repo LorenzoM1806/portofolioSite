@@ -23,7 +23,7 @@ import dsh from "../assets/projects/datavisualisatie/page1.png";
 
 
 // voorbeeld icons
-import { IconExternalLink, IconPlayerPlay } from "@tabler/icons-react";
+import { IconExternalLink } from "@tabler/icons-react";
 
 // Voorbeeldprojecten met extra info
 const projecten = [

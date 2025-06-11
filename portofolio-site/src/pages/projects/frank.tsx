@@ -12,6 +12,7 @@ import {
   Space,
   Group,
   ActionIcon,
+  AspectRatio,
 } from "@mantine/core";
 import { IconArrowBigLeft } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
@@ -75,14 +76,16 @@ function Frank() {
             Samen met Maarten Marx heb ik een <strong>dashboard</strong>{" "}
             gerealiseerd waarin Rurant alle conversaties met Frank kan inzien en
             beheren. Dit dashboard is opgebouwd in <strong>Angular</strong> en
-            maakt gebruik van een <strong>REST-API</strong>
+            maakt gebruik van een <strong>REST-API </strong>
             en <strong>WebSockets</strong> om data te verwerken en door te
             sturen naar de AI-engine. Tot slot stonden wij in voor de
             uiteindelijke integratie van alle componenten. Hiervoor werd een
-            <strong>Raspberry Pi</strong> ingezet om de verschillende onderdelen met elkaar te
-            verbinden. Zowel de <strong>microfoon en luidspreker</strong> als de AI-componenten
+            <strong> Raspberry Pi</strong> ingezet om de verschillende onderdelen
+            met elkaar te verbinden. Zowel de{" "}
+            <strong>microfoon en luidspreker</strong> als de AI-componenten
             werden gekoppeld aan dit centrale systeem, zodat een samenhangend
-            geheel ontstond. De werking werd aangestuurd via één <strong>Python-script </strong>
+            geheel ontstond. De werking werd aangestuurd via één{" "}
+            <strong>Python-script </strong>
             dat op de Raspberry Pi werd uitgevoerd en instond voor het
             coördineren van de volledige functionaliteit.
           </Text>
@@ -101,11 +104,13 @@ function Frank() {
             <Container>
               <Title order={2}>Project informatie</Title>
               <Divider my={"sm"} w={"99%"} />
-              <Text>Opleiding: Bachelor Toegepaste Informatica</Text>
-              <Text>Vak: Project 4.0</Text>
-              <Space h={'md'}></Space>
               <Text>
-                Gebruikte Technologiën:
+                <strong>Opleiding:</strong> Bachelor Toegepaste Informatica
+              </Text>
+              <Text>Vak: Project 4.0</Text>
+              <Space h={"md"}></Space>
+              <Text>
+                <strong>Gebruikte Technologiën:</strong>
                 <List>
                   <List.Item>Angular</List.Item>
                   <List.Item>Python</List.Item>
@@ -115,9 +120,9 @@ function Frank() {
                   <List.Item>Raspberry Pi</List.Item>
                 </List>
               </Text>
-              <Space h={'md'}></Space>
+              <Space h={"md"}></Space>
               <Text>
-                Het Team:
+                <strong>Het Team:</strong>
                 <List>
                   <List.Item>Maarten Marx</List.Item>
                   <List.Item>Filip Kolb</List.Item>
@@ -125,9 +130,9 @@ function Frank() {
                   <List.Item>Egemen alkan</List.Item>
                 </List>
               </Text>
-              <Space h={'md'}></Space>
+              <Space h={"md"}></Space>
               <Text>
-                Github:{" "}
+                <strong>Github: </strong>
                 <Anchor
                   href="https://github.com/egealkan/Project4.0"
                   target="_blank"
@@ -137,21 +142,20 @@ function Frank() {
                   https://github.com/egealkan/Project4.0
                 </Anchor>
               </Text>
-              <Text>
-                Promo video:{" "}
-                <Anchor
-                  href="https://www.youtube.com/watch?v=_260Fb4Qc2k"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  c={"#e14631"}
-                >
-                  Frank de Bank
-                </Anchor>
-              </Text>
             </Container>
           </Paper>
         </Grid.Col>
       </Grid>
+      <Container size="md" my="xl">
+        <AspectRatio ratio={16 / 9}>
+          <iframe
+            src="https://www.youtube.com/embed/_260Fb4Qc2k"
+            title="YouTube video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </AspectRatio>
+      </Container>
     </Container>
   );
 }

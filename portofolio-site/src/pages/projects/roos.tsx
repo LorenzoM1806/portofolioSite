@@ -70,18 +70,18 @@ function Roos() {
             <Container>
               <Title order={2}>Project informatie</Title>
               <Divider my={"sm"} w={"99%"} />
-              <Text>Opleiding: Graduaat Programmeren</Text>
-              <Text>Vak: Projecten voor het werkveld</Text>
+              <Text><strong>Opleiding:</strong> Graduaat Programmeren</Text>
+              <Text><strong>Vak:</strong> Projecten voor het werkveld</Text>
               <Space h={'md'}/>
               <Text>
-                Gebruikte Technologiën:
+                <strong>Gebruikte Technologiën:</strong>
                 <List>
                   <List.Item>WordPress</List.Item>
                 </List>
               </Text>
               <Space h={'md'}/>
               <Text>
-                Het Team:
+                <strong>Het Team:</strong>
                 <List>
                   <List.Item>Stijn Van Hees</List.Item>
                   <List.Item>Yenebeb Daniel Fikre</List.Item>
@@ -91,7 +91,7 @@ function Roos() {
               </Text>
               <Space h={'md'}/>
               <Text>
-                De website:{" "}
+                <strong>De website:{" "}</strong>
                 <Anchor
                   href="https://www.clubroos.be/"
                   target="_blank"

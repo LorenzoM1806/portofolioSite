@@ -106,11 +106,11 @@ function Php() {
             <Container>
               <Title order={2}>Project informatie</Title>
               <Divider my={"sm"} w={"99%"} />
-              <Text>Opleiding: Bachelor Toegepaste Informatica</Text>
+              <Text><strong>Opleiding:</strong> Bachelor Toegepaste Informatica</Text>
               <Text>Vak: PhP</Text>
               <Space h={"md"} />
               <Text>
-                Technologiën:
+                <strong>Technologiën:</strong>
                 <List>
                   <List.Item>PhP</List.Item>
                   <List.Item>bootstrap</List.Item>
@@ -118,7 +118,7 @@ function Php() {
               </Text>
               <Space h={"md"} />
               <Text>
-                Groep:
+                <strong>Het Team:</strong>
                 <List>
                   <List.Item>Robbe Verbist</List.Item>
                   <List.Item>Bradley Vandenweyer</List.Item>
@@ -127,7 +127,7 @@ function Php() {
               </Text>
               <Space h={"md"} />
               <Text>
-                Github:{" "}
+                <strong>Github:{" "}</strong>
                 <Anchor
                   href="https://github.com/itfactory-tm/2024-ProjectPHP-503 "
                   target="_blank"
@@ -138,7 +138,7 @@ function Php() {
                 </Anchor>
               </Text>
               <Text>
-                De site:{" "}
+                <strong>De site:{" "}</strong>
                 <Anchor
                   href="https://roland.smo2024.be/"
                   target="_blank"

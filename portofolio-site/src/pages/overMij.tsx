@@ -14,8 +14,14 @@ import {
   Anchor,
   Card,
   Center,
+  Timeline,
 } from "@mantine/core";
 import profielFoto from "../assets/profiel foto.jpg";
+import {
+  IconBriefcase,
+  IconCertificate,
+  IconSchool,
+} from "@tabler/icons-react";
 
 function OverMij() {
   return (
@@ -43,10 +49,14 @@ function OverMij() {
 
           <Stack gap="md" style={{ flex: 1 }}>
             <Text>
-              Hallo, mijn naam is Lorenzo. Ik woon in <strong>Beerse</strong> en ben student
-              <strong>Toegepaste Informatica – Application Development</strong> aan de Thomas
-              More hogeschool. Momenteel zit ik in het laatste jaar van mijn
-              opleiding.
+              Hallo, mijn naam is Lorenzo. Ik woon in <strong>Beerse</strong> en
+              ben student
+              <strong>
+                {" "}
+                Toegepaste Informatica – Application Development
+              </strong>{" "}
+              aan de Thomas More hogeschool. Momenteel zit ik in het laatste
+              jaar van mijn opleiding.
             </Text>
 
             <Text>
@@ -60,8 +70,9 @@ function OverMij() {
             </Text>
 
             <Text>
-              Ik ben een <strong>leergierige, analytisch</strong> denkende ontwikkelaar. Ik werk
-              graag in <strong>teamverband</strong>, maar neem ook <strong>zelfstandig </strong>
+              Ik ben een <strong>leergierige, analytisch</strong> denkende
+              ontwikkelaar. Ik werk graag in <strong>teamverband</strong>, maar
+              neem ook <strong>zelfstandig </strong>
               verantwoordelijkheid voor mijn werk. Wat mij het meeste
               aanspreekt, is het bouwen van praktische toepassingen die echt
               gebruikt worden.
@@ -123,77 +134,118 @@ function OverMij() {
         <Grid>
           {/* ---------------------- LINKS: Opleidingen & Ervaringen ---------------------- */}
           <Grid.Col span={6}>
-            <Stack gap="lg">
-              {/* OPLEIDINGEN */}
-              <Title order={4}>Opleidingen</Title>
+            <Stack>
+              <Title order={4}>Overzicht</Title>
 
-              <Card shadow="sm" radius="md" withBorder>
-                <Card.Section p="md">
-                  <Stack gap="xs">
-                    <Title order={5}>
-                      Professionele Bachelor Toegepaste Informatica
-                    </Title>
-                    <Text c="dimmed">2023 – Heden</Text>
-                    <Text c="dimmed">Thomas More, Campus Geel</Text>
-                    <Text c="dimmed">
-                      Keuzetraject: Application Development
-                    </Text>
-                  </Stack>
-                </Card.Section>
-              </Card>
+              <Timeline active={9} bulletSize={24} lineWidth={2} color="#e14631">
+                {/* --- Opleidingen --- */}
+                <Timeline.Item
+                  title="Opleidingen"
+                />
 
-              <Card shadow="sm" radius="md" withBorder>
-                <Card.Section p="md">
-                  <Stack gap="xs">
-                    <Title order={5}>Graduaat Programmeren</Title>
-                    <Text c="dimmed">2021 – 2024</Text>
-                    <Text c="dimmed">Thomas More, Campus Turnhout</Text>
-                    <Text c="dimmed">Opleiding Programmeren</Text>
-                  </Stack>
-                </Card.Section>
-              </Card>
+                <Timeline.Item
+                  title="Professionele Bachelor Toegepaste Informatica"
+                  bullet={<IconSchool size={16} />}
+                >
+                  <Text size="sm" c="dimmed">
+                    2023 – Heden
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Thomas More, Campus Geel
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Keuzetraject: Application Development
+                  </Text>
+                </Timeline.Item>
 
-              <Card shadow="sm" radius="md" withBorder>
-                <Card.Section p="md">
-                  <Stack gap="xs">
-                    <Title order={5}>Diploma Secundair Onderwijs</Title>
-                    <Text c="dimmed">2019 – 2021</Text>
-                    <Text c="dimmed">Klein Seminarie – Hoogstraten</Text>
-                    <Text c="dimmed">
-                      Opleiding Boekhouden &amp; Informatica
-                    </Text>
-                  </Stack>
-                </Card.Section>
-              </Card>
+                <Timeline.Item
+                  title="Graduaat Programmeren"
+                  bullet={<IconSchool size={16} />}
+                >
+                  <Text size="sm" c="dimmed">
+                    2021 – 2024
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Thomas More, Campus Turnhout
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Opleiding Programmeren
+                  </Text>
+                </Timeline.Item>
 
-              <Divider my="xl" />
+                <Timeline.Item
+                  title="Diploma Secundair Onderwijs"
+                  bullet={<IconSchool size={16} />}
+                >
+                  <Text size="sm" c="dimmed">
+                    2019 – 2021
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Klein Seminarie – Hoogstraten
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Opleiding Boekhouden & Informatica
+                  </Text>
+                </Timeline.Item>
 
-              {/* ERVARINGEN */}
-              <Title order={4}>Ervaringen</Title>
+                {/* --- Werkervaring --- */}
+                <Timeline.Item
+                  title="Werkervaring"
+                />
 
-              <Card shadow="sm" radius="md" withBorder>
-                <Card.Section p="md">
-                  <Stack gap="xs">
-                    <Title order={5}>Stage Ventigrate</Title>
-                    <Text c="dimmed">2025 (13 weken)</Text>
-                    <Text c="dimmed">Kontich</Text>
-                    <Text c="dimmed">
-                      Opleiding: Bachelor Toegepaste Informatica
-                    </Text>
-                  </Stack>
-                </Card.Section>
-              </Card>
+                <Timeline.Item
+                  title="Stage Ventigrate"
+                  bullet={<IconBriefcase size={16} />}
+                >
+                  <Text size="sm" c="dimmed">
+                    2025 (13 weken)
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Kontich
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Opleiding: Bachelor Toegepaste Informatica
+                  </Text>
+                </Timeline.Item>
 
-              <Card shadow="sm" radius="md" withBorder>
-                <Card.Section p="md">
-                  <Stack gap="xs">
-                    <Title order={5}>Stage Solenco Power</Title>
-                    <Text c="dimmed">2023 (13 weken)</Text>
-                    <Text c="dimmed">Lille</Text>
-                    <Text c="dimmed">Opleiding: Graduaat Programmeren</Text>
-                  </Stack>
-                </Card.Section>
-              </Card>
+                <Timeline.Item
+                  title="Stage Solenco Power"
+                  bullet={<IconBriefcase size={16} />}
+                >
+                  <Text size="sm" c="dimmed">
+                    2023 (13 weken)
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Lille
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Opleiding: Graduaat Programmeren
+                  </Text>
+                </Timeline.Item>
+
+                {/* --- Certificaten --- */}
+                <Timeline.Item
+                  title="Certificaten"
+                />
+
+                <Timeline.Item
+                  title="React Native for Mobile Developers"
+                  bullet={<IconCertificate size={16} />}
+                >
+                  <Text size="sm" c="dimmed">
+                    2024 – Udemy
+                  </Text>
+                </Timeline.Item>
+
+                <Timeline.Item
+                  title="Essential Kotlin Programming Course (Android Developers)"
+                  bullet={<IconCertificate size={16} />}
+                >
+                  <Text size="sm" c="dimmed">
+                    2024 – Udemy
+                  </Text>
+                </Timeline.Item>
+              </Timeline>
             </Stack>
           </Grid.Col>
 
@@ -371,7 +423,16 @@ function OverMij() {
 
         {/* Download CV-knop */}
         <Group mt="xl">
-          <Button href="/Lorenzo Miechielsen.pdf" component="a" color="#e14631" download radius={'md'} size="md">Download CV</Button>
+          <Button
+            href="/Lorenzo Miechielsen.pdf"
+            component="a"
+            color="#e14631"
+            download
+            radius={"md"}
+            size="md"
+          >
+            Download CV
+          </Button>
         </Group>
       </Container>
     </>

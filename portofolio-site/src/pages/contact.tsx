@@ -10,18 +10,18 @@ export default function ContactBar() {
   const items = [
     {
       icon: <IconMail size={20} />,
-      text: 'your.email@example.com',
-      href: 'mailto:your.email@example.com',
+      text: 'lorenzomiechielsen@hotmail.com',
+      href: 'mailto:lorenzomiechielsen@hotmail.com',
     },
     {
       icon: <IconPhone size={20} />,
-      text: '+31 6 1234 5678',
-      href: 'tel:+1234567890',
+      text: '0476418547',
+      href: 'tel:0476418547',
     },
     {
       icon: <IconBrandLinkedin size={20} />,
-      text: 'linkedin.com/in/yourprofile',
-      href: 'https://www.linkedin.com/in/yourprofile',
+      text: 'LinkedIn Lorenzo',
+      href: 'https://www.linkedin.com/in/lorenzo-miechielsen-82602b27a/',
     },
     {
       icon: <IconLicense size={20} />,

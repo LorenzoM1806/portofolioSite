@@ -96,20 +96,20 @@ function React() {
             <Container>
               <Title order={2}>Project informatie</Title>
               <Divider my={"sm"} w={"99%"} />
-              <Text>Opleiding: Graduaat Programmeren</Text>
-              <Text>Vak: Frontend Frameworks</Text>
+              <Text><strong>Opleiding:</strong> Graduaat Programmeren</Text>
+              <Text><strong>Vak:</strong> Frontend Frameworks</Text>
               <Space h={'md'}/>
               <Text>
-                Gebruikte Technologiën:
+                <strong>Gebruikte Technologiën:</strong>
                 <List>
                   <List.Item>React</List.Item>
                 </List>
               </Text>
               <Space h={'md'}/>
-              <Text>Solo opdracht</Text>
+              <Text><strong>Solo opdracht</strong></Text>
               <Space h={'md'}/>
               <Text>
-                Github:{" "}
+                <strong>Github:{" "}</strong>
                 <Anchor
                   href="https://github.com/it-graduaten/permanente-evaluatieopdracht-dagopleiding-LorenzoM1806 "
                   target="_blank"

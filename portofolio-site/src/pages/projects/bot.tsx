@@ -109,11 +109,11 @@ function Bot() {
             <Container>
               <Title order={2}>Project informatie</Title>
               <Divider my={"sm"} w={"99%"} />
-              <Text>Opleiding: Bachelor Toegepaste Informatica</Text>
+              <Text><strong>Opleiding:</strong> Bachelor Toegepaste Informatica</Text>
               <Text>Vak: .Net Advanced</Text>
               <Space h={'md'}></Space>
               <Text>
-                Gebruikte Technologiën:
+                <strong>Gebruikte Technologiën:</strong>
                 <List>
                   <List.Item>.Net</List.Item>
                   <List.Item>Azure</List.Item>
@@ -121,14 +121,14 @@ function Bot() {
               </Text>
               <Space h={'md'}/>
               <Text>
-                Het Team:
+                <strong>Het Team:</strong>
                 <List>
                   <List.Item>Moussa Ramzi</List.Item>
                 </List>
               </Text>
               <Space h={'md'}/>
               <Text>
-                Github:
+                <strong>Github:</strong>
                 <List>
                   <List.Item>
                     <Anchor

@@ -73,20 +73,20 @@ function Dashboard() {
             <Container>
               <Title order={2}>Project informatie</Title>
               <Divider my={"sm"} w={"99%"} />
-              <Text>Opleiding: Bachelor Toegepaste Informatica</Text>
-              <Text>Vak: Data Visualisatie</Text>
+              <Text><strong>Opleiding:</strong> Bachelor Toegepaste Informatica</Text>
+              <Text><strong>Vak:</strong> Data Visualisatie</Text>
               <Space h='md'/>
               <Text>
-                Gebruikte Technologiën:
+                <strong>Gebruikte Technologiën:</strong>
                 <List>
                   <List.Item>Qlick</List.Item>
                 </List>
               </Text>
               <Space h='md'/>
-              <Text>Solo opdracht</Text>
+              <Text><strong>Solo opdracht</strong></Text>
               <Space h='md'/>
               <Text>
-                Dashboard video:{" "}
+                <strong>Dashboard info video:{" "}</strong>
                 <Anchor
                   href="https://www.youtube.com/watch?v=ux7LZe9QRA4 "
                   target="_blank"

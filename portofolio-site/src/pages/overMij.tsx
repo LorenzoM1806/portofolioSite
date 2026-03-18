@@ -137,7 +137,7 @@ function OverMij() {
             <Stack>
               <Title order={4}>Overzicht</Title>
 
-              <Timeline active={9} bulletSize={24} lineWidth={2} color="#e14631">
+              <Timeline active={10} bulletSize={24} lineWidth={2} color="#e14631">
                 {/* --- Opleidingen --- */}
                 <Timeline.Item
                   title="Opleidingen"

@@ -1,4 +1,4 @@
-import { Group, Anchor, Text, Container, Box } from '@mantine/core';
+import { Group, Anchor, Text, Container, Box, SimpleGrid, Stack } from '@mantine/core';
 import {
   IconMail,
   IconPhone,
@@ -15,7 +15,7 @@ export default function ContactBar() {
     },
     {
       icon: <IconPhone size={20} />,
-      text: '0476418547',
+      text: '0476 41 85 47', // Spatiëring voor betere leesbaarheid
       href: 'tel:0476418547',
     },
     {
@@ -31,35 +31,41 @@ export default function ContactBar() {
   ];
 
   return (
-    <Box bg="#1c2123" py="xl" px="md">
+    <Box bg="#1c2123" py={{ base: "xl", md: "lg" }} px="md">
       <Container size="lg">
-        <Group justify="space-around" wrap="wrap">
-          {items.map(({ icon, text, href }) =>
-            href ? (
+        {/* SimpleGrid zorgt voor 2 kolommen op mobiel, 4 op desktop */}
+        <SimpleGrid 
+          cols={{ base: 1, xs: 2, md: 4 }} 
+          spacing={{ base: "md", md: "xl" }}
+        >
+          {items.map(({ icon, text, href }) => {
+            const content = (
+              <Group gap={8} wrap="nowrap">
+                <Box c="#e14631" style={{ display: 'flex' }}>{icon}</Box>
+                <Text size="sm" c="white" style={{ whiteSpace: 'nowrap' }}>
+                  {text}
+                </Text>
+              </Group>
+            );
+
+            return href ? (
               <Anchor
                 key={text}
                 href={href}
                 target={href.startsWith('http') ? '_blank' : undefined}
                 rel="noopener noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 8,
-                  color: 'white',
-                  textDecoration: 'none',
-                }}
+                underline="hover"
+                style={{ textDecoration: 'none' }}
               >
-                {icon}
-                <Text size="sm">{text}</Text>
+                {content}
               </Anchor>
             ) : (
-              <Group key={text} gap={8} style={{ color: 'white' }}>
-                {icon}
-                <Text size="sm">{text}</Text>
-              </Group>
-            )
-          )}
-        </Group>
+              <Box key={text}>
+                {content}
+              </Box>
+            );
+          })}
+        </SimpleGrid>
       </Container>
     </Box>
   );

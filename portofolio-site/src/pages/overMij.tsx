@@ -15,6 +15,7 @@ import {
   Card,
   Center,
   Timeline,
+  Flex,
 } from "@mantine/core";
 import profielFoto from "../assets/profiel foto.jpg";
 import {
@@ -27,7 +28,7 @@ function OverMij() {
   return (
     <>
       {/* ====================== OVER MIJ ====================== */}
-      <Container mt="xl" fluid>
+      <Container mt="xl" fluid px={{ base: 'xs', sm: 'md'}}>
         {/* Header */}
         <Box mb="md">
           <Title order={2}>Over mij</Title>
@@ -35,20 +36,25 @@ function OverMij() {
         </Box>
 
         {/* Foto + Introductie */}
-        <Group gap="xl">
-          <Box w={"40%"}>
+        <Stack gap="xl">
+          <Flex
+            direction={{base: 'column', md: 'row'}}
+            gap={'xl'}
+            align={{ base: 'center', md: 'flex-start'}}  
+          >
+          <Box w={{ base: '100%', md: '30%' }}>
             <Center>
               <Image
                 radius="lg"
                 src={profielFoto}
                 alt="Profielfoto Lorenzo"
-                w={300}
+                w={{ base: 200, sm: 250, md: 300 }}
               />
             </Center>
           </Box>
 
           <Stack gap="md" style={{ flex: 1 }}>
-            <Text>
+            <Text ta={{ base: 'center', md: 'left' }}>
               Hallo, mijn naam is Lorenzo. Ik woon in <strong>Beerse</strong> en
               ben student
               <strong>
@@ -121,19 +127,20 @@ function OverMij() {
               </List.Item>
             </List>
           </Stack>
-        </Group>
+          </Flex>
+        </Stack>
       </Container>
 
       {/* ====================== CV ====================== */}
-      <Container mt="xl" fluid>
+      <Container mt="50px" fluid px={{ base: 'xs', sm: 'md' }}>
         <Box mb="md">
           <Title order={3}>CV</Title>
           <Divider mt="xs" size="lg" color="#e14631" />
         </Box>
 
-        <Grid>
+        <Grid gutter={'xl'}>
           {/* ---------------------- LINKS: Opleidingen & Ervaringen ---------------------- */}
-          <Grid.Col span={6}>
+          <Grid.Col span={{ base: 12, md: 6 }}>
             <Stack>
               <Title order={4}>Overzicht</Title>
 
@@ -265,7 +272,7 @@ function OverMij() {
           </Grid.Col>
 
           {/* ---------------------- RECHTS: Skills / Ervaring met ---------------------- */}
-          <Grid.Col span={6}>
+          <Grid.Col span={{ base: 12, md: 6 }}>
             <Stack gap="lg">
               <Title order={4}>Ervaring met</Title>
 
@@ -276,33 +283,36 @@ function OverMij() {
                     <Title order={5}>Front-end</Title>
                     <List spacing="xs" withPadding>
                       <List.Item>
-                        React{" "}
+                        <Text size="sm">React</Text>
                         <Progress
                           value={65}
-                          w={350}
-                          style={{ maxWidth: 350 }}
+                          w={'200%'}
+                          style={{ maxWidth: '200%' }}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                       <List.Item>
-                        HTML, CSS, Bootstrap, Tailwind, Mantine{" "}
+                        <Text size="sm">HTML, CSS, Bootstrap, Tailwind, Mantine</Text>
                         <Progress
                           value={65}
-                          style={{ maxWidth: 350 }}
-                          w={350}
+                          style={{ maxWidth: '100%' }}
+                          w={'100%'}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                       <List.Item>
-                        Angular{" "}
+                        <Text size="sm">Angular</Text>
                         <Progress
                           value={60}
-                          style={{ maxWidth: 350 }}
-                          w={350}
+                          style={{ maxWidth: '200%' }}
+                          w={'200%'}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                     </List>
@@ -317,53 +327,58 @@ function OverMij() {
                     <Title order={5}>Back-end &amp; Databases</Title>
                     <List spacing="xs" withPadding>
                       <List.Item>
-                        MySQL, MongoDB, MSSQL{" "}
+                        <Text size="sm">MySQL, MongoDB, MSSQL</Text>
                         <Progress
                           value={65}
-                          style={{ maxWidth: 350 }}
-                          w={350}
+                          style={{ maxWidth: '100%' }}
+                          w={'100%'}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                       <List.Item>
-                        ASP.Net{" "}
+                        <Text size="sm">ASP.Net</Text>
                         <Progress
                           value={65}
-                          style={{ maxWidth: 350 }}
-                          w={350}
+                          style={{ maxWidth: '200%' }}
+                          w={'200%'}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                       <List.Item>
-                        Java{" "}
+                        <Text size="sm">Java</Text>
                         <Progress
                           value={60}
-                          style={{ maxWidth: 350 }}
-                          w={350}
+                          style={{ maxWidth: '200%' }}
+                          w={'200%'}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                       <List.Item>
-                        PHP{" "}
+                        <Text size="sm">PHP</Text>
                         <Progress
                           value={55}
-                          style={{ maxWidth: 350 }}
-                          w={350}
+                          style={{ maxWidth: '200%' }}
+                          w={'200%'}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                       <List.Item>
-                        Python{" "}
+                        <Text size="sm">Python</Text>
                         <Progress
                           value={55}
-                          style={{ maxWidth: 350 }}
-                          w={350}
+                          style={{ maxWidth: '200%' }}
+                          w={'200%'}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                     </List>
@@ -378,23 +393,25 @@ function OverMij() {
                     <Title order={5}>Mobile &amp; Hybrid</Title>
                     <List spacing="xs" withPadding>
                       <List.Item>
-                        Flutter{" "}
+                        <Text size="sm">Flutter</Text>
                         <Progress
                           value={55}
-                          style={{ maxWidth: 350 }}
-                          w={350}
+                          style={{ maxWidth: '200%' }}
+                          w={'200%'}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                       <List.Item>
-                        Kotlin{" "}
+                        <Text size="sm">Kotlin</Text>
                         <Progress
                           value={30}
-                          style={{ maxWidth: 350 }}
-                          w={350}
+                          style={{ maxWidth: '200%' }}
+                          w={'200%'}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                     </List>
@@ -409,23 +426,25 @@ function OverMij() {
                     <Title order={5}>Overige Tools &amp; Systems</Title>
                     <List spacing="xs" withPadding>
                       <List.Item>
-                        Linux{" "}
+                        <Text size="sm">Linux</Text>
                         <Progress
                           value={55}
-                          style={{ maxWidth: 350 }}
-                          w={350}
+                          style={{ maxWidth: '200%' }}
+                          w={'200%'}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                       <List.Item>
-                        Qlik{" "}
+                        <Text size="sm">Qlik</Text>
                         <Progress
                           value={35}
-                          style={{ maxWidth: 350 }}
-                          w={350}
+                          style={{ maxWidth: '200%' }}
+                          w={'200%'}
                           color="#e14631"
                           size="xs"
+                          mt={4}
                         />
                       </List.Item>
                     </List>

@@ -48,8 +48,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <AppShell
       padding="lg"
+      header={{ height: 60 /*collapsed: !opened*/ }}
       navbar={{
-        width: { sm: 150, lg: 250 },
+        width: { sm: 200, lg: 250 },
         breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
@@ -63,6 +64,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       }}
     >
       {/* ── Navbar / Zijbalk ───────────────────────────────────────────────────── */}
+
+      {/* VOEG DIT TOE: Een Header die alleen op mobiel verschijnt via CSS of Mantine hiddenFrom */}
+        <AppShell.Header hiddenFrom="sm" p="md" style={{ display: 'flex', alignItems: 'center', backgroundColor: "#1c2123", borderBottom: '1px solid #333' }}>
+          <Burger
+            opened={opened}
+            onClick={toggle}
+            size="sm"
+            color="White"
+            mr="xl"
+          />
+          <Text fw={700} color="White">Lorenzo Miechielsen</Text>
+        </AppShell.Header>
+
       <AppShell.Navbar p="md">
         {/* Top‐sectie: burger-menu + avatar */}
         <div
@@ -73,13 +87,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             marginBottom: theme.spacing.md,
           }}
         >
-          <Burger
+          {/*<Burger
             opened={opened}
             onClick={toggle}
             hiddenFrom="sm"
             size="sm"
             color={theme.colors.gray[6]}
-          />
+          />*/}
           <Stack align="center">
             <Avatar src={foto} w={"auto"} h={80} />
             <Text fw={700} color="white">
@@ -87,6 +101,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Text>
           </Stack>
         </div>
+
+        
 
         {/* Links naar secties: active wordt true als hash === href */}
         <AppShell.Section grow>

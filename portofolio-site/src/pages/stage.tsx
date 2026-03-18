@@ -33,9 +33,7 @@ import { IconClock, IconFileText, IconTarget, IconFile3d, IconUserQuestion } fro
 function Stage() {
   return (
     <Container
-      fluid
-      mih={"100vh"}
-      style={{ justifyContent: "center", alignItems: "center" }}
+      fluid px={{ base: "xs", sm: "md" }} py="xl"
     >
       {/* Page Title */}
       <Box mb="lg">
@@ -43,8 +41,8 @@ function Stage() {
         <Divider mt="xs" size="lg" color="#e14631" />
       </Box>
 
-      <Grid w={"100%"}>
-        <Grid.Col span={6}>
+      <Grid gutter={"xl"} align="center">
+        <Grid.Col span={{ base: 12, md: 7 }}>
           <Box mb="lg">
             <Title order={4}>Het stage bedrijf</Title>
             <Space h="sm" />
@@ -65,20 +63,21 @@ function Stage() {
             </Text>
           </Box>
         </Grid.Col>
-        <Grid.Col span={6}>
+        <Grid.Col span={{ base: 12, md: 5 }}>
           <Paper bg="var(--mantine-color-dark-9)" radius="lg" p="lg" withBorder>
             <Center>
               <Image
                 src={ventigratelogo}
                 alt="Ventigrate Logo"
-                width={250}
+                w={{ base: 200, sm: 250 }}
                 fit="contain"
-                style={{ padding: 15 }}
               />
             </Center>
           </Paper>
         </Grid.Col>
       </Grid>
+
+      <Space h="xl" />
 
       <Box mb="lg">
         <Title order={4}>De Opdracht</Title>
@@ -101,9 +100,9 @@ function Stage() {
         </Text>
       </Box>
 
-      <Grid gutter={"md"}>
-        <Grid.Col span={6}>
-          <Box mb="lg">
+      <Grid gutter={"xl"}>
+        <Grid.Col span={{ base: 12, md: 6 }}>
+          <Box>
             <Title order={4}>Het resultaat</Title>
             <Space h="sm" />
             <Text mb={"md"}>
@@ -122,8 +121,8 @@ function Stage() {
             </Text>
           </Box>
         </Grid.Col>
-        <Grid.Col span={6}>
-          <Carousel withIndicators h={250} w={"100%"} maw={600}>
+        <Grid.Col span={{ base: 12, md: 6 }}>
+          <Carousel withIndicators h={{ base: 200, sm: 250, md: 300 }}>
             <Carousel.Slide>
               <Image
                 src={login}
@@ -215,107 +214,38 @@ function Stage() {
         </Grid.Col>
       </Grid>
 
-      <Box mb="lg">
+      <Space h="xl" />
+
+      <Box mb="lg" mt={30}>
         <Title order={3}>Stage Documenten</Title>
-        <Stack gap="md" mt="md" w={"50%"}>
-          {/* Projectplan */}
-          <Card withBorder shadow="sm" radius="md" p="md">
-            <Group justify='space-between'>
-              <Group>
-                <ThemeIcon variant="light" radius="xl" size="lg">
-                  <IconTarget size={20} />
-                </ThemeIcon>
-                <Box>
-                  <Text fw={500}>Projectplan</Text>
-                  <Text size="sm" c="dimmed">
-                    Uitgebreide planning en doelstellingen van het stageproject
-                  </Text>
-                </Box>
-              </Group>
-              <Anchor href="/Projectplan.pdf" download>
-                Download
-              </Anchor>
-            </Group>
-          </Card>
+        <Stack gap="md" mt="md" w={{ base: "100%", md: "70%", lg: "60%" }}>
 
-          {/* Realisatiedocument */}
-          <Card withBorder shadow="sm" radius="md" p="md">
-            <Group justify='space-between'>
-              <Group>
-                <ThemeIcon variant="light" color="green" radius="xl" size="lg">
-                  <IconFileText size={20} />
-                </ThemeIcon>
-                <Box>
-                  <Text fw={500}>Realisatiedocument</Text>
-                  <Text size="sm" c="dimmed">
-                    Technische documentatie en implementatie details
-                  </Text>
-                </Box>
+          {[
+            { title: "Projectplan", icon: <IconTarget size={20} />, color: "blue", desc: "Uitgebreide planning en doelstellingen", url: "/Projectplan.pdf" },
+            { title: "Realisatiedocument", icon: <IconFileText size={20} />, color: "green", desc: "Technische documentatie en implementatie", url: "/realizatiedocument.pdf" },
+            { title: "Reflectie", icon: <IconClock size={20} />, color: "violet", desc: "Persoonlijke reflectie op de leerervaring", url: "/reflectie.pdf" },
+            { title: "User Guide", icon: <IconUserQuestion size={20} />, color: "grape", desc: "Handleiding voor eindgebruikers", url: "/User guide.pdf" },
+            { title: "Installation Guide", icon: <IconFile3d size={20} />, color: "yellow", desc: "Technische installatie handleiding", url: "/installation guide.pdf" }
+          ].map((doc) => (
+            <Card key={doc.title} withBorder shadow="sm" radius="md" p="md">
+              <Group justify="space-between" wrap="nowrap">
+                <Group wrap="nowrap">
+                  <ThemeIcon variant="light" color={doc.color} radius="xl" size="lg">
+                    {doc.icon}
+                  </ThemeIcon>
+                  <Box>
+                    <Text fw={500} size="sm">{doc.title}</Text>
+                    <Text size="xs" c="dimmed" visibleFrom="sm">
+                      {doc.desc}
+                    </Text>
+                  </Box>
+                </Group>
+                <Anchor href={doc.url} download size="sm" fw={600} c="#e14631">
+                  Download
+                </Anchor>
               </Group>
-              <Anchor href="/realizatiedocument.pdf" download>
-                Download
-              </Anchor>
-            </Group>
-          </Card>
-
-          {/* Reflectie */}
-          <Card withBorder shadow="sm" radius="md" p="md">
-            <Group justify='space-between'>
-              <Group>
-                <ThemeIcon variant="light" color="violet" radius="xl" size="lg">
-                  <IconClock size={20} />
-                </ThemeIcon>
-                <Box>
-                  <Text fw={500}>Reflectie</Text>
-                  <Text size="sm" c="dimmed">
-                    Persoonlijke reflectie op de leerervaring en ontwikkeling
-                  </Text>
-                </Box>
-              </Group>
-              <Anchor href="/reflectie.pdf" download>
-                Download
-              </Anchor>
-            </Group>
-          </Card>
-
-          {/* User Guide */}
-          <Card withBorder shadow="sm" radius="md" p="md">
-            <Group justify='space-between'>
-              <Group>
-                <ThemeIcon variant="light" color="grape" radius="xl" size="lg">
-                  <IconUserQuestion size={20} />
-                </ThemeIcon>
-                <Box>
-                  <Text fw={500}>User Guide</Text>
-                  <Text size="sm" c="dimmed">
-                    Een handleiding om de applicatie te gebruiken
-                  </Text>
-                </Box>
-              </Group>
-              <Anchor href="/User guide.pdf" download>
-                Download
-              </Anchor>
-            </Group>
-          </Card>
-          {/* Installation Guide */}
-          <Card withBorder shadow="sm" radius="md" p="md">
-            <Group justify='space-between'>
-              <Group>
-                <ThemeIcon variant="light" color="yellow" radius="xl" size="lg">
-                  <IconFile3d size={20} />
-                </ThemeIcon>
-                <Box>
-                  <Text fw={500}>Installation Guide</Text>
-                  <Text size="sm" c="dimmed">
-                    een handleiding om de applicatie te installeren
-                  </Text>
-                </Box>
-              </Group>
-              <Anchor href="/installation guide.pdf" download>
-                Download
-              </Anchor>
-            </Group>
-          </Card>
+            </Card>
+          ))}
         </Stack>
       </Box>
     </Container>

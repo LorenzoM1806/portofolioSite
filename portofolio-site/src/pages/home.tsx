@@ -22,8 +22,7 @@ function Home() {
         <Title order={1}>Portfolio – Lorenzo Miechielsen</Title>
 
         <Text size="lg">
-          Welkom op mijn professionele portfolio, het sluitstuk van mijn
-          opleiding Toegepaste Informatica – Application Development. Deze site
+          Welkom op mijn professionele portfolio. Deze site
           geeft een overzicht van de vaardigheden en kennis die ik heb
           verworven, geïllustreerd met projecten, stages en praktische
           toepassingen.

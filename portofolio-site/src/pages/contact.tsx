@@ -1,4 +1,4 @@
-import { Group, Anchor, Text, Container, Box, SimpleGrid, Stack } from '@mantine/core';
+import { Group, Anchor, Text, Container, Box, SimpleGrid } from '@mantine/core';
 import {
   IconMail,
   IconPhone,

@@ -56,13 +56,12 @@ function OverMij() {
           <Stack gap="md" style={{ flex: 1 }}>
             <Text ta={{ base: 'center', md: 'left' }}>
               Hallo, mijn naam is Lorenzo. Ik woon in <strong>Beerse</strong> en
-              ben student
+              ben afgestudeert in de opleiding
               <strong>
                 {" "}
                 Toegepaste Informatica – Application Development
               </strong>{" "}
-              aan de Thomas More hogeschool. Momenteel zit ik in het laatste
-              jaar van mijn opleiding.
+              aan de Thomas More hogeschool.
             </Text>
 
             <Text>

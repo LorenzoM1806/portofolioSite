@@ -48,7 +48,7 @@ function OverMij() {
                 radius="lg"
                 src={profielFoto}
                 alt="Profielfoto Lorenzo"
-                w={{ base: 200, sm: 250, md: 300 }}
+                w={{ base: 200, sm: 250, md: 250 }}
               />
             </Center>
           </Box>

@@ -148,7 +148,7 @@ function OverMij() {
                   bullet={<IconSchool size={16} />}
                 >
                   <Text size="sm" c="dimmed">
-                    2023 – Heden
+                    2023 – 2025
                   </Text>
                   <Text size="sm" c="dimmed">
                     Thomas More, Campus Geel
@@ -192,6 +192,21 @@ function OverMij() {
                 <Timeline.Item
                   title="Werkervaring"
                 />
+
+                <Timeline.Item
+                  title="Interim Bijrijder - De Valk Distibution"
+                  bullet={<IconBriefcase size={16} />}
+                >
+                  <Text size="sm" c="dimmed">
+                    September 2025
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Oktober - December 2025 (2-3 dagen/week)
+                  </Text>
+                  <Text size="sm" c="dimmed">
+                    Wijnegem
+                  </Text>
+                </Timeline.Item>
 
                 <Timeline.Item
                   title="Stage Ventigrate"
